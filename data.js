@@ -10,9 +10,9 @@ const SITE = {
   badges: ["🧭 完全西向き", "🧱 壁高140cm", "東京都内", "プランター栽培", "2025年〜"],
   // ヒーロー写真（3枚推奨：1枚目が大きく表示される）
   heroPhotos: [
-    // "images/hero1.jpg",
-    // "images/hero2.jpg",
-    // "images/hero3.jpg",
+    // "hero1.jpg",
+    // "hero2.jpg",
+    // "hero3.jpg",
   ],
 };
 
@@ -27,8 +27,8 @@ const ENV = [
 // 設備・資材
 const SETUP = {
   photos: [
-    // { src: "images/setup1.jpg", caption: "プランター配置全体" },
-    // { src: "images/setup2.jpg", caption: "スタンドで高さを確保" },
+    // { src: "setup1.jpg", caption: "プランター配置全体" },
+    // { src: "setup2.jpg", caption: "スタンドで高さを確保" },
   ],
   cards: [
     {
@@ -75,8 +75,8 @@ const VEGGIES = [
     ],
     westNote: "西向きでも半日陰に強いパセリは旺盛に生育。種まきから越冬して2年目に入り安定した収穫が続いている。",
     photos: [
-      "images/parsley_240616_3.jpg",
-      "images/parsley_240616_1.jpg",
+      "parsley_240616_3.jpg",
+      "parsley_240616_1.jpg",
     ],
     timeline: [
       { date: "10/3夜", tags: ["seed"], title: "種を水に浸す", text: "一晩水に浸して発芽を促す。好光性種子のため翌日の種まき後は遮光しない。", photos: [] },
@@ -100,9 +100,9 @@ const VEGGIES = [
         title: "収穫前・旺盛に生育中",
         text: "青々とした葉が鉢いっぱいに広がっている状態。",
         photos: [
-          "images/parsley_240616_3.jpg",
-          "images/parsley_240616_1.jpg",
-          "images/parsley_240616_2.jpg",
+          "parsley_240616_3.jpg",
+          "parsley_240616_1.jpg",
+          "parsley_240616_2.jpg",
         ],
       },
       {
@@ -111,10 +111,10 @@ const VEGGIES = [
         title: "収穫 茎10本ほど",
         text: "外葉から茎ごと約10本収穫。収穫後も株元から新芽がしっかり残っており、次の収穫も期待できる状態。",
         photos: [
-          "images/parsley_240616_harvest.jpg",
-          "images/parsley_240616_after1.jpg",
-          "images/parsley_240616_after2.jpg",
-          "images/parsley_240616_after3.jpg",
+          "parsley_240616_harvest.jpg",
+          "parsley_240616_after1.jpg",
+          "parsley_240616_after2.jpg",
+          "parsley_240616_after3.jpg",
         ],
       },
       {
@@ -123,7 +123,7 @@ const VEGGIES = [
         title: "液肥実施・週1ペースで管理",
         text: "6/16の収穫後から3日。新芽が再び展開してきた。液肥を実施。週1回ペースで継続予定。",
         photos: [
-          "images/parsley_250619_1.jpg",
+          "parsley_250619_1.jpg",
         ],
       },
     ],
@@ -162,8 +162,8 @@ const VEGGIES = [
     ],
     westNote: "西向きでは日照不足が心配だが、チャレンジ中。着果・肥大のデータを記録して来年に活かす。",
     photos: [
-      "images/melon_250619_1.jpg",
-      "images/melon_250615_1.jpg",
+      "melon_250619_1.jpg",
+      "melon_250615_1.jpg",
     ],
     timeline: [
       { date: "5/21", tags: ["seed"], title: "小ポット×3に種まき（深さ1cm）", text: "3つの小ポットに種をまく。深さ1cm。", photos: [] },
@@ -174,14 +174,14 @@ const VEGGIES = [
         tags: ["grow"],
         title: "本葉1枚しっかり展開",
         text: "本葉が1枚しっかり展開。白ポット1株・黒ポット2株の計3株が順調に育苗中。",
-        photos: ["images/melon_250615_1.jpg"],
+        photos: ["melon_250615_1.jpg"],
       },
       {
         date: "6/19",
         tags: ["grow"],
         title: "本葉2枚しっかり展開・定植間近",
         text: "本葉2枚がしっかり展開。定植の目安（本葉3〜4枚）まであと少し。",
-        photos: ["images/melon_250619_1.jpg"],
+        photos: ["melon_250619_1.jpg"],
       },
     ],
   },
@@ -213,7 +213,7 @@ const VEGGIES = [
     warnings: [],
     westNote: "そら豆の後作として同じプランターを使用。石灰水で土壌調整してからスタート。",
     photos: [
-      "images/moroheiya_250615_1.jpg",
+      "moroheiya_250615_1.jpg",
     ],
     timeline: [
       { date: "5/11", tags: ["grow"], title: "スナップエンドウ終了・根取り＆石灰水", text: "前作のスナップエンドウを終了し根を取り除き、石灰水で土壌調整。", photos: [] },
@@ -225,7 +225,7 @@ const VEGGIES = [
         tags: ["grow"],
         title: "本葉3枚目が出始め",
         text: "赤ポット・黒ポットそれぞれに1株ずつ育苗中。本葉3枚目が展開し始めた段階。",
-        photos: ["images/moroheiya_250615_1.jpg"],
+        photos: ["moroheiya_250615_1.jpg"],
       },
       { date: "6/19", tags: ["grow"], title: "本葉4枚目展開・黒ポットを定植", text: "本葉4枚目が出てきたタイミングで黒ポットの株を定植。", photos: [] },
     ],
@@ -250,8 +250,8 @@ const VEGGIES = [
     warnings: [],
     westNote: "西向きでも葉物は問題なく育つ。ルッコラは特に相性が良く、種まきから旺盛に生育している。",
     photos: [
-      "images/rucola_250619_1.jpg",
-      "images/rucola_250615_1.jpg",
+      "rucola_250619_1.jpg",
+      "rucola_250615_1.jpg",
     ],
     timeline: [
       { date: "4/29", tags: ["seed"], title: "種まき", text: "長鉢に種まき。", photos: [] },
@@ -261,14 +261,14 @@ const VEGGIES = [
         tags: ["grow"],
         title: "旺盛に生育中・収穫間近",
         text: "長鉢いっぱいに葉が茂り、収穫間近の状態。",
-        photos: ["images/rucola_250615_1.jpg"],
+        photos: ["rucola_250615_1.jpg"],
       },
       {
         date: "6/19",
         tags: ["grow"],
         title: "さらに生育・葉が密に",
         text: "6/15からさらに葉が密になり、いよいよ収穫適期。",
-        photos: ["images/rucola_250619_1.jpg"],
+        photos: ["rucola_250619_1.jpg"],
       },
     ],
   },
@@ -302,8 +302,8 @@ const VEGGIES = [
     warnings: [],
     westNote: "",
     photos: [
-      "images/chili_250615_1.jpg",
-      "images/chili_250615_2.jpg",
+      "chili_250615_1.jpg",
+      "chili_250615_2.jpg",
     ],
     timeline: [
       {
@@ -312,8 +312,8 @@ const VEGGIES = [
         title: "開花・小さな実が確認できる",
         text: "白い花が複数咲いており、小さな緑の実も確認できる。青い支柱ケージで茎をしっかり支えている。",
         photos: [
-          "images/chili_250615_1.jpg",
-          "images/chili_250615_2.jpg",
+          "chili_250615_1.jpg",
+          "chili_250615_2.jpg",
         ],
       },
       {
@@ -322,9 +322,9 @@ const VEGGIES = [
         title: "頂部内側の枝を剪定・化成肥料追肥",
         text: "頂部の内側に込み入って伸びた枝を剪定して風通しと光を改善。化成肥料を追肥。剪定した枝には白い花と小さな実がついていた。",
         photos: [
-          "images/chili_250619_3.jpg",
-          "images/chili_250619_1.jpg",
-          "images/chili_250619_2.jpg",
+          "chili_250619_3.jpg",
+          "chili_250619_1.jpg",
+          "chili_250619_2.jpg",
         ],
       },
     ],
@@ -357,7 +357,7 @@ const VEGGIES = [
     ],
     westNote: "種まきから育苗中。西向きでも育てやすい野菜のひとつ。6月下旬の植え付けを目標に管理中。",
     photos: [
-      "images/nira_250615_1.jpg",
+      "nira_250615_1.jpg",
     ],
     timeline: [
       { date: "4/29", tags: ["seed"], title: "種まき", text: "発芽適温18〜22℃を目安に種まき。", photos: [] },
@@ -374,7 +374,7 @@ const VEGGIES = [
         tags: ["grow"],
         title: "生育中・白長鉢でビニールハウス内管理",
         text: "白い長鉢いっぱいに細い葉が密生している。ビニールハウス内で管理中。黄色粘着トラップで害虫対策も実施。",
-        photos: ["images/nira_250615_1.jpg"],
+        photos: ["nira_250615_1.jpg"],
       },
     ],
   },
@@ -407,7 +407,7 @@ const VEGGIES = [
     ],
     westNote: "西向きでも育つが徒長しやすいため、できるだけ高い位置に置いて西日を確保する。",
     photos: [
-      "images/basil_250615_1.jpg",
+      "basil_250615_1.jpg",
     ],
     timeline: [
       { date: "4/23", tags: ["seed"], title: "プリンカップに遮光して種まき", text: "小さなプリンカップに種をまき、遮光して発芽を促す。", photos: [] },
@@ -420,7 +420,7 @@ const VEGGIES = [
         tags: ["grow"],
         title: "生育中・テラコッタ鉢＋長鉢に複数株",
         text: "テラコッタ鉢に1株、長鉢に2株を栽培中。いずれも本葉が展開し順調に生育している。",
-        photos: ["images/basil_250615_1.jpg"],
+        photos: ["basil_250615_1.jpg"],
       },
     ],
   },
@@ -450,8 +450,8 @@ const VEGGIES = [
     ],
     westNote: "零れ種から自然発芽した株。西向きでも旺盛に生育中。摘芯を繰り返してわき芽を増やす管理を継続。",
     photos: [
-      "images/shiso_250619_2.jpg",
-      "images/shiso_250619_1.jpg",
+      "shiso_250619_2.jpg",
+      "shiso_250619_1.jpg",
     ],
     timeline: [
       {
@@ -502,8 +502,8 @@ const VEGGIES = [
         title: "摘芯実施・草丈30cm（左株）",
         text: "四角い鉢の左株が草丈約30cmになったため摘芯。右株は先に摘芯済み。",
         photos: [
-          "images/shiso_250615_2.jpg",
-          "images/shiso_250615_1.jpg",
+          "shiso_250615_2.jpg",
+          "shiso_250615_1.jpg",
         ],
       },
       {
@@ -512,8 +512,8 @@ const VEGGIES = [
         title: "液肥実施・丸鉢株も摘芯",
         text: "液肥を実施（週1回ペースで継続予定）。丸い鉢の株も草丈30cmほどになったため摘芯。",
         photos: [
-          "images/shiso_250619_2.jpg",
-          "images/shiso_250619_1.jpg",
+          "shiso_250619_2.jpg",
+          "shiso_250619_1.jpg",
         ],
       },
     ],
@@ -549,7 +549,7 @@ const VEGGIES = [
     ],
     westNote: "西向きのため午後からの日照のみ。ネットに誘引して上方向へ伸ばし西日を最大限確保。",
     photos: [
-      "images/cucumber_250615_1.jpg",
+      "cucumber_250615_1.jpg",
     ],
     timeline: [
       { date: "5/24", tags: ["grow"], title: "苗を購入", text: "ホームセンターで苗を購入。", photos: [] },
@@ -560,7 +560,7 @@ const VEGGIES = [
         tags: ["grow"],
         title: "化成肥料・生育中・開花確認",
         text: "化成肥料を施用。ネットに誘引しながら上方向へ生育中。黄色い花も確認できる。",
-        photos: ["images/cucumber_250615_1.jpg"],
+        photos: ["cucumber_250615_1.jpg"],
       },
     ],
   },
@@ -595,7 +595,7 @@ const VEGGIES = [
     ],
     westNote: "西向きのため午後からの日照のみ。支柱で高い位置へ誘引し西日を最大限確保して管理中。",
     photos: [
-      "images/tomato_250615_1.jpg",
+      "tomato_250615_1.jpg",
     ],
     timeline: [
       { date: "5/29", tags: ["grow"], title: "購入・定植", text: "苗を購入し、プランター1つに定植。", photos: [] },
@@ -605,14 +605,14 @@ const VEGGIES = [
         tags: ["grow"],
         title: "生育中・スパイラル支柱で誘引・開花確認",
         text: "スパイラル支柱で上方向へ誘引しながら生育中。黄色い花も確認できる。",
-        photos: ["images/tomato_250615_1.jpg"],
+        photos: ["tomato_250615_1.jpg"],
       },
       {
         date: "6/19",
         tags: ["grow"],
         title: "わき芽かき・液肥実施・高さ約60cm・4段目花房確認",
         text: "高さ約60cmに成長。花節が4つ目まで出てきた。わき芽かきと液肥を実施。",
-        photos: ["images/tomato_250619_1.jpg"],
+        photos: ["tomato_250619_1.jpg"],
       },
     ],
   },
@@ -635,6 +635,6 @@ const LOG = [
   //   tags: ["seed"],
   //   title: "秋作スタート",
   //   text: "しゅんぎく・そら豆・スナップを播種。",
-  //   photo: "images/log_0929.jpg",
+  //   photo: "log_0929.jpg",
   // },
 ];
