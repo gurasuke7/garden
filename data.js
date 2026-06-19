@@ -616,42 +616,6 @@ const VEGGIES = [
       },
     ],
   },
-    emoji: "🌿",
-    name: "（例）中葉しゅんぎく",
-    sub: "ダイソー種",
-    color: "moss",
-    status: "🌱 栽培中",   // 例：✅ 収穫完了 / 🌱 栽培中 / 📋 栽培予定 / ❌ 失敗
-    westRating: 4,          // 西向き適性 ★の数（1〜5）
-    basicData: [
-      { key: "発芽・生育適温", val: "15〜20℃" },
-      { key: "pH", val: "6.0〜6.5" },
-    ],
-    points: [
-      "好暗性：種まき後は遮光",
-      "乾燥NG・毎日水やり",
-    ],
-    warnings: [
-      "過湿注意（腐れやすい）",
-    ],
-    westNote: "西向き環境での観察メモをここに書く。",
-    // カード上部に表示する写真（2枚推奨）
-    photos: [
-      // "images/shungiku_seed.jpg",
-      // "images/shungiku_grow.jpg",
-    ],
-    // タイムライン（上から古い順）
-    timeline: [
-      {
-        date: "9/29",
-        tags: ["seed"],     // seed=種まき / grow=生育 / harvest=収穫 / trouble=トラブル / flower=開花 / fail=失敗
-        title: "種まき",
-        text: "スジまきで播種。",
-        photos: [
-          // "images/shungiku_0929.jpg",
-        ],
-      },
-    ],
-  },
 ];
 
 // タグの表示名と色（基本このままでOK）
