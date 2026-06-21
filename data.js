@@ -162,8 +162,8 @@ const VEGGIES = [
     ],
     westNote: "西向きでは日照不足が心配だが、チャレンジ中。着果・肥大のデータを記録して来年に活かす。",
     photos: [
-      "melon_250619_1.jpg",
-      "melon_250615_1.jpg",
+      "melon_250621_1.jpg",
+      "melon_250621_3.jpg",
     ],
     timeline: [
       { date: "5/21", tags: ["seed"], title: "小ポット×3に種まき（深さ1cm）", text: "3つの小ポットに種をまく。深さ1cm。", photos: [] },
@@ -182,6 +182,13 @@ const VEGGIES = [
         title: "本葉2枚しっかり展開・定植間近",
         text: "本葉2枚がしっかり展開。定植の目安（本葉3〜4枚）まであと少し。",
         photos: ["melon_250619_1.jpg"],
+      },
+      {
+        date: "6/21",
+        tags: ["grow"],
+        title: "本葉3枚目展開・定植＆支柱設置",
+        text: "本葉3枚目が出始めたタイミングで定植を実施。支柱も設置して誘引開始。",
+        photos: ["melon_250621_1.jpg", "melon_250621_2.jpg", "melon_250621_3.jpg"],
       },
     ],
   },
@@ -243,7 +250,7 @@ const VEGGIES = [
     name: "ルッコラ",
     sub: "種まきから育苗",
     color: "teal",
-    status: "🌱 栽培中",
+    status: "✂️ 収穫中",
     westRating: 5,
     basicData: [
       { key: "追肥開始", val: "背丈10cm頃から液肥" },
@@ -256,8 +263,8 @@ const VEGGIES = [
     warnings: [],
     westNote: "西向きでも葉物は問題なく育つ。ルッコラは特に相性が良く、種まきから旺盛に生育している。",
     photos: [
+      "rucola_250621_1.jpg",
       "rucola_250619_1.jpg",
-      "rucola_250615_1.jpg",
     ],
     timeline: [
       { date: "4/29", tags: ["seed"], title: "種まき", text: "長鉢に種まき。", photos: [] },
@@ -269,12 +276,21 @@ const VEGGIES = [
         text: "長鉢いっぱいに葉が茂り、収穫間近の状態。",
         photos: ["rucola_250615_1.jpg"],
       },
+      { date: "6/18", tags: ["harvest"], title: "収穫 4〜5株", text: "外側の株から4〜5株を収穫。", photos: [] },
       {
         date: "6/19",
         tags: ["grow"],
         title: "さらに生育・葉が密に",
         text: "6/15からさらに葉が密になり、いよいよ収穫適期。",
         photos: ["rucola_250619_1.jpg"],
+      },
+      { date: "6/20", tags: ["harvest"], title: "収穫 4〜5株", text: "前回に続けて4〜5株を収穫。", photos: [] },
+      {
+        date: "6/21",
+        tags: ["grow"],
+        title: "元肥入りの土を増土・追肥なし",
+        text: "元肥入りの土を増土したため、追肥は実施せず。収穫後も次々と葉が展開している。",
+        photos: ["rucola_250621_1.jpg"],
       },
     ],
   },
@@ -363,6 +379,7 @@ const VEGGIES = [
     ],
     westNote: "種まきから育苗中。西向きでも育てやすい野菜のひとつ。6月下旬の植え付けを目標に管理中。",
     photos: [
+      "nira_250621_1.jpg",
       "nira_250615_1.jpg",
     ],
     timeline: [
@@ -381,6 +398,13 @@ const VEGGIES = [
         title: "生育中・白長鉢でビニールハウス内管理",
         text: "白い長鉢いっぱいに細い葉が密生している。ビニールハウス内で管理中。黄色粘着トラップで害虫対策も実施。",
         photos: ["nira_250615_1.jpg"],
+      },
+      {
+        date: "6/21",
+        tags: ["grow"],
+        title: "さらに伸びる",
+        text: "葉が長く伸びてきた。植え付け適期の目安（草丈20cm）が近づいている。",
+        photos: ["nira_250621_1.jpg"],
       },
     ],
   },
@@ -413,7 +437,8 @@ const VEGGIES = [
     ],
     westNote: "西向きでも育つが徒長しやすいため、できるだけ高い位置に置いて西日を確保する。",
     photos: [
-      "basil_250615_1.jpg",
+      "basil_250621_2.jpg",
+      "basil_250621_1.jpg",
     ],
     timeline: [
       { date: "4/23", tags: ["seed"], title: "プリンカップに遮光して種まき", text: "小さなプリンカップに種をまき、遮光して発芽を促す。", photos: [] },
@@ -427,6 +452,13 @@ const VEGGIES = [
         title: "生育中・テラコッタ鉢＋長鉢に複数株",
         text: "テラコッタ鉢に1株、長鉢に2株を栽培中。いずれも本葉が展開し順調に生育している。",
         photos: ["basil_250615_1.jpg"],
+      },
+      {
+        date: "6/21",
+        tags: ["grow"],
+        title: "草丈8cmほどに成長",
+        text: "各株とも草丈8cmほどに成長。葉の枚数も増え、順調に生育中。",
+        photos: ["basil_250621_1.jpg", "basil_250621_2.jpg"],
       },
     ],
   },
@@ -531,7 +563,7 @@ const VEGGIES = [
     name: "きゅうり",
     sub: "",
     color: "moss",
-    status: "🌱 栽培中",
+    status: "⚠️ 経過観察中",
     westRating: 3,
     basicData: [
       { key: "追肥開始", val: "本葉3枚から1〜2週に1回" },
@@ -552,9 +584,11 @@ const VEGGIES = [
       "水切れ注意！特に夏は朝・夕の1日2回水やり",
       "定植後2〜3日は強い日差しに注意（日陰で様子見）",
       "実が次々なる時期は追肥をこまめに",
+      "13節目あたりまで開花・着果しても実が途中で萎れて落ちる事象が発生中（原因調査・経過観察中）",
     ],
     westNote: "西向きのため午後からの日照のみ。ネットに誘引して上方向へ伸ばし西日を最大限確保。",
     photos: [
+      "cucumber_250621_1.jpg",
       "cucumber_250615_1.jpg",
     ],
     timeline: [
@@ -567,6 +601,13 @@ const VEGGIES = [
         title: "化成肥料・生育中・開花確認",
         text: "化成肥料を施用。ネットに誘引しながら上方向へ生育中。黄色い花も確認できる。",
         photos: ["cucumber_250615_1.jpg"],
+      },
+      {
+        date: "6/21",
+        tags: ["grow", "trouble"],
+        title: "高さ約1m・13〜14節目に着果",
+        text: "つるの高さが約1mに成長。13〜14節目に実がつき始めた。ただし13節目までも開花・着果はしていたが、途中で実が萎れて落ちてしまうケースが続いている。今回の実が無事育つか経過観察中。",
+        photos: ["cucumber_250621_1.jpg", "cucumber_250621_2.jpg"],
       },
     ],
   },
