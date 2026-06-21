@@ -93,6 +93,13 @@ const VEGGIES = [
       { date: "5/19", tags: ["grow"], title: "液肥実施", text: "", photos: [] },
       { date: "5/28", tags: ["grow"], title: "液肥実施", text: "", photos: [] },
       { date: "6/5", tags: ["grow"], title: "液肥実施", text: "", photos: [] },
+      {
+        date: "6/7",
+        tags: ["grow"],
+        title: "旺盛に生育中",
+        text: "葉が大きく広がり、ボリュームのある株に成長している。",
+        photos: ["parsley_250607_1.jpg"],
+      },
       { date: "6/12", tags: ["grow", "harvest"], title: "液肥実施・収穫", text: "液肥を実施するとともに収穫も行った。", photos: [] },
       {
         date: "6/16",
@@ -170,6 +177,13 @@ const VEGGIES = [
       { date: "5/31", tags: ["grow"], title: "発芽確認・複数の芽", text: "複数の芽が出始めた。", photos: [] },
       { date: "6/2", tags: ["grow"], title: "間引き・2株以下/ポットに", text: "根が繊細なためハサミで間引き。各ポット2株以下に。", photos: [] },
       {
+        date: "6/7",
+        tags: ["grow"],
+        title: "双葉の状態・育苗順調",
+        text: "3つのポットそれぞれで双葉がしっかり開いている。順調に育苗中。",
+        photos: ["melon_250607_1.jpg"],
+      },
+      {
         date: "6/15",
         tags: ["grow"],
         title: "本葉1枚しっかり展開",
@@ -228,6 +242,13 @@ const VEGGIES = [
       { date: "5/29", tags: ["seed"], title: "種まき", text: "ポットに種まき（やや適当に播種）。", photos: [] },
       { date: "6/2", tags: ["grow"], title: "双葉複数発芽・間引き", text: "双葉がいくつも発芽。3株程度に間引き。", photos: [] },
       {
+        date: "6/7",
+        tags: ["grow"],
+        title: "赤・黒ポットそれぞれで複数株が双葉の状態",
+        text: "赤ポット・黒ポットそれぞれに複数株が発芽し、双葉が開いている。",
+        photos: ["moroheiya_250607_1.jpg"],
+      },
+      {
         date: "6/15",
         tags: ["grow"],
         title: "本葉3枚目が出始め",
@@ -268,7 +289,13 @@ const VEGGIES = [
     ],
     timeline: [
       { date: "4/29", tags: ["seed"], title: "種まき", text: "長鉢に種まき。", photos: [] },
-      { date: "6/7", tags: ["grow"], title: "液肥実施", text: "背丈が10cmほどになったため液肥を開始。", photos: [] },
+      {
+        date: "6/7",
+        tags: ["grow"],
+        title: "液肥実施",
+        text: "背丈が10cmほどになったため液肥を開始。葉が密生し旺盛に生育中。",
+        photos: ["rucola_250607_1.jpg"],
+      },
       {
         date: "6/15",
         tags: ["grow"],
@@ -317,17 +344,40 @@ const VEGGIES = [
     name: "唐辛子",
     sub: "",
     color: "amber",
-    status: "🌱 栽培中",
+    status: "🌶️ 結実中",
     westRating: 3,
-    basicData: [],
-    points: [],
-    warnings: [],
-    westNote: "",
+    basicData: [
+      { key: "仕立て方", val: "3本仕立て" },
+      { key: "追肥開始", val: "定植後3週、または一番花がついたら" },
+      { key: "化成肥料", val: "3週に1回" },
+      { key: "液肥", val: "週1回" },
+    ],
+    points: [
+      "倒れないように支柱を立てる",
+      "一番花がついたら、その下の枝までのわき芽は全て摘み取る（花はそのまま残す）",
+      "3本仕立てにして主枝を育てる",
+    ],
+    warnings: [
+      "過湿NG",
+      "乾燥しすぎもNG（水切れに注意）",
+    ],
+    westNote: "西向きでも開花・着果まで順調に進んでいる。支柱でしっかり支えながら経過観察中。",
     photos: [
       "chili_250615_1.jpg",
       "chili_250615_2.jpg",
     ],
     timeline: [
+      { date: "4/29", tags: ["grow"], title: "購入・植え替え", text: "苗を購入し、プランターへ植え替え。", photos: [] },
+      { date: "5/29", tags: ["flower"], title: "白い花が開花・化成肥料", text: "白い花が咲き始めた。化成肥料を施用。", photos: [] },
+      { date: "6/1", tags: ["flower", "grow"], title: "一番花が着花・わき芽かき", text: "一番花が付いたタイミングでわき芽かきを実施。その下の枝までのわき芽を摘み取り、3本仕立てに整える。", photos: [] },
+      { date: "6/5", tags: ["grow"], title: "実が着き始める", text: "小さな実が着き始めた。", photos: [] },
+      {
+        date: "6/7",
+        tags: ["flower", "grow"],
+        title: "複数の花が開花・実も成長中",
+        text: "白い花が複数咲いており、小さな実もいくつか確認できる。株全体も大きく茂ってきた。",
+        photos: ["chili_250607_2.jpg", "chili_250607_1.jpg"],
+      },
       {
         date: "6/15",
         tags: ["flower"],
@@ -341,8 +391,8 @@ const VEGGIES = [
       {
         date: "6/19",
         tags: ["grow"],
-        title: "頂部内側の枝を剪定・化成肥料追肥",
-        text: "頂部の内側に込み入って伸びた枝を剪定して風通しと光を改善。化成肥料を追肥。剪定した枝には白い花と小さな実がついていた。",
+        title: "化成肥料・内側の2枝を剪定",
+        text: "頂部の内側に込み入って伸びた2本の枝を剪定して風通しと光を改善。化成肥料を追肥。剪定した枝には白い花と小さな実がついていた。",
         photos: [
           "chili_250619_3.jpg",
           "chili_250619_1.jpg",
@@ -390,6 +440,13 @@ const VEGGIES = [
         title: "草丈6〜7cm・間引き実施",
         text: "草丈6〜7cmに成長。本来は15cmまで待つところ忘れてしまい、株間1cmと4〜5株の8cmに間引き。次回は手順通りに。",
         photos: [],
+      },
+      {
+        date: "6/7",
+        tags: ["grow"],
+        title: "葉が伸びて密集",
+        text: "細い葉がさらに伸びて密集してきた。",
+        photos: ["nira_250607_1.jpg"],
       },
       { date: "6/11", tags: ["grow"], title: "化成肥料", text: "化成肥料を施用。", photos: [] },
       {
@@ -446,6 +503,13 @@ const VEGGIES = [
       { date: "5/3頃", tags: ["grow"], title: "鉢まきの芽も発生・プリンカップ分を廃止", text: "別に鉢へ直まきした分も発芽。プリンカップより生育が良かったため、鉢まきの苗に絞ることに。", photos: [] },
       { date: "5/11", tags: ["grow"], title: "間引き", text: "生育の悪い苗を間引き。", photos: [] },
       { date: "5/31", tags: ["grow"], title: "本葉4枚・2株に最終間引き", text: "本葉4枚に成長したタイミングで2株に最終間引き。株間を広げて生育スペースを確保。", photos: [] },
+      {
+        date: "6/7",
+        tags: ["grow"],
+        title: "順調に生育中",
+        text: "長鉢・テラコッタ鉢それぞれで本葉がしっかり展開し、順調に生育中。",
+        photos: ["basil_250607_1.jpg", "basil_250607_2.jpg"],
+      },
       {
         date: "6/15",
         tags: ["grow"],
@@ -528,6 +592,13 @@ const VEGGIES = [
         photos: [],
       },
       {
+        date: "6/7",
+        tags: ["grow"],
+        title: "生育中",
+        text: "四角い茶色プランターの株、白い鉢の株ともに葉を大きく広げ、旺盛に生育中。",
+        photos: ["shiso_250607_2.jpg", "shiso_250607_1.jpg"],
+      },
+      {
         date: "6/12",
         tags: ["grow"],
         title: "液肥実施",
@@ -596,6 +667,13 @@ const VEGGIES = [
       { date: "5/25", tags: ["grow"], title: "植付", text: "プランターに定植。定植後2〜3日は強い日差しを避けて様子見。", photos: [] },
       { date: "5/29", tags: ["grow"], title: "日当たりの良い場所へ移動", text: "根が落ち着いたためより日の当たる場所へ移動。", photos: [] },
       {
+        date: "6/7",
+        tags: ["grow"],
+        title: "つるが伸び始め・ネットに誘引開始",
+        text: "つるが伸び始めたため、ネットへの誘引を開始。葉も大きく展開してきた。",
+        photos: ["cucumber_250607_1.jpg"],
+      },
+      {
         date: "6/15",
         tags: ["grow"],
         title: "化成肥料・生育中・開花確認",
@@ -647,6 +725,13 @@ const VEGGIES = [
     timeline: [
       { date: "5/29", tags: ["grow"], title: "購入・定植", text: "苗を購入し、プランター1つに定植。", photos: [] },
       { date: "6/1", tags: ["grow"], title: "日当たりの良い場所へ移動・わき芽かき", text: "より日の当たる場所へプランターを移動。初回のわき芽かきを実施。", photos: [] },
+      {
+        date: "6/7",
+        tags: ["grow"],
+        title: "スパイラル支柱で誘引中・生育順調",
+        text: "支柱に沿って上方向へ誘引しながら順調に生育中。",
+        photos: ["tomato_250607_1.jpg"],
+      },
       {
         date: "6/15",
         tags: ["grow"],
