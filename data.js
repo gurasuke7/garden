@@ -175,7 +175,7 @@ const VEGGIES = [
     timeline: [
       { date: "5/21", tags: ["seed"], title: "小ポット×3に種まき（深さ1cm）", text: "3つの小ポットに種をまく。深さ1cm。", photos: [] },
       { date: "5/31", tags: ["grow"], title: "発芽確認・複数の芽", text: "複数の芽が出始めた。", photos: [] },
-      { date: "6/2", tags: ["grow"], title: "間引き・2株以下/ポットに", text: "根が繊細なためハサミで間引き。各ポット2株以下に。", photos: [] },
+      { date: "6/2", tags: ["grow"], title: "間引き・2株以下/ポットに", text: "根が繊細なためハサミで間引き。各ポット2株以下に。", photos: ["melon_250602_1.jpg"] },
       {
         date: "6/7",
         tags: ["grow"],
@@ -240,7 +240,7 @@ const VEGGIES = [
       { date: "5/11", tags: ["grow"], title: "スナップエンドウ終了・根取り＆石灰水", text: "前作のスナップエンドウを終了し根を取り除き、石灰水で土壌調整。", photos: [] },
       { date: "5/17", tags: ["grow"], title: "元肥追加", text: "次作に向けて元肥を追加。", photos: [] },
       { date: "5/29", tags: ["seed"], title: "種まき", text: "ポットに種まき（やや適当に播種）。", photos: [] },
-      { date: "6/2", tags: ["grow"], title: "双葉複数発芽・間引き", text: "双葉がいくつも発芽。3株程度に間引き。", photos: [] },
+      { date: "6/2", tags: ["grow"], title: "双葉複数発芽・間引き", text: "双葉がいくつも発芽。3株程度に間引き。", photos: ["moroheiya_250602_1.jpg"] },
       {
         date: "6/7",
         tags: ["grow"],
@@ -289,6 +289,13 @@ const VEGGIES = [
     ],
     timeline: [
       { date: "4/29", tags: ["seed"], title: "種まき", text: "長鉢に種まき。", photos: [] },
+      {
+        date: "6/1",
+        tags: ["grow"],
+        title: "本葉が密に展開・生育旺盛",
+        text: "本葉が次々と展開し、プランター全体に葉が密生。順調に生育中。",
+        photos: ["rucola_250601_1.jpg"],
+      },
       {
         date: "6/7",
         tags: ["grow"],
@@ -369,7 +376,7 @@ const VEGGIES = [
     timeline: [
       { date: "4/29", tags: ["grow"], title: "購入・植え替え", text: "苗を購入し、プランターへ植え替え。", photos: [] },
       { date: "5/29", tags: ["flower"], title: "白い花が開花・化成肥料", text: "白い花が咲き始めた。化成肥料を施用。", photos: [] },
-      { date: "6/1", tags: ["flower", "grow"], title: "一番花が着花・わき芽かき", text: "一番花が付いたタイミングでわき芽かきを実施。その下の枝までのわき芽を摘み取り、3本仕立てに整える。", photos: [] },
+      { date: "6/1", tags: ["flower", "grow"], title: "一番花が着花・わき芽かき", text: "一番花が付いたタイミングでわき芽かきを実施。その下の枝までのわき芽を摘み取り、3本仕立てに整える。", photos: ["chili_250601_1.jpg"] },
       { date: "6/5", tags: ["grow"], title: "実が着き始める", text: "小さな実が着き始めた。", photos: [] },
       {
         date: "6/7",
@@ -504,6 +511,13 @@ const VEGGIES = [
       { date: "5/11", tags: ["grow"], title: "間引き", text: "生育の悪い苗を間引き。", photos: [] },
       { date: "5/31", tags: ["grow"], title: "本葉4枚・2株に最終間引き", text: "本葉4枚に成長したタイミングで2株に最終間引き。株間を広げて生育スペースを確保。", photos: [] },
       {
+        date: "6/1",
+        tags: ["grow"],
+        title: "双葉・本葉が展開",
+        text: "プランターのあちこちで双葉や本葉が展開し、順調に育苗中。",
+        photos: ["basil_250601_1.jpg"],
+      },
+      {
         date: "6/7",
         tags: ["grow"],
         title: "順調に生育中",
@@ -575,7 +589,7 @@ const VEGGIES = [
         tags: ["grow"],
         title: "摘芯（1株）・ボカシ肥料投入",
         text: "1株を摘芯。コーヒーかすのボカシ肥料を1株に大さじ1杯ほど投入。",
-        photos: [],
+        photos: ["shiso_250601_1.jpg"],
       },
       {
         date: "6/3",
@@ -625,6 +639,13 @@ const VEGGIES = [
           "shiso_250619_1.jpg",
         ],
       },
+      {
+        date: "6/21",
+        tags: ["harvest"],
+        title: "少し収穫",
+        text: "少し収穫。冷やし中華の具に使用。",
+        photos: ["shiso_250621_1.jpg"],
+      },
     ],
   },
 
@@ -666,6 +687,13 @@ const VEGGIES = [
       { date: "5/24", tags: ["grow"], title: "苗を購入", text: "ホームセンターで苗を購入。", photos: [] },
       { date: "5/25", tags: ["grow"], title: "植付", text: "プランターに定植。定植後2〜3日は強い日差しを避けて様子見。", photos: [] },
       { date: "5/29", tags: ["grow"], title: "日当たりの良い場所へ移動", text: "根が落ち着いたためより日の当たる場所へ移動。", photos: [] },
+      {
+        date: "6/1",
+        tags: ["grow"],
+        title: "つるが伸び始め",
+        text: "つるが伸び始め、葉も大きく広がってきた。ネットへの誘引準備中。",
+        photos: ["cucumber_250601_1.jpg"],
+      },
       {
         date: "6/7",
         tags: ["grow"],
@@ -724,7 +752,7 @@ const VEGGIES = [
     ],
     timeline: [
       { date: "5/29", tags: ["grow"], title: "購入・定植", text: "苗を購入し、プランター1つに定植。", photos: [] },
-      { date: "6/1", tags: ["grow"], title: "日当たりの良い場所へ移動・わき芽かき", text: "より日の当たる場所へプランターを移動。初回のわき芽かきを実施。", photos: [] },
+      { date: "6/1", tags: ["grow"], title: "日当たりの良い場所へ移動・わき芽かき", text: "より日の当たる場所へプランターを移動。初回のわき芽かきを実施。小さな実も確認できる。", photos: ["tomato_250601_1.jpg"] },
       {
         date: "6/7",
         tags: ["grow"],
