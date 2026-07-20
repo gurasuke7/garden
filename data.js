@@ -92,6 +92,13 @@ const VEGGIES = [
       { date: "5/12", tags: ["grow"], title: "液肥実施", text: "", photos: [] },
       { date: "5/19", tags: ["grow"], title: "液肥実施", text: "", photos: [] },
       { date: "5/28", tags: ["grow"], title: "液肥実施", text: "", photos: [] },
+      {
+        date: "5/29",
+        tags: ["grow"],
+        title: "旺盛に生育中",
+        text: "葉が大きく茂り、鉢からあふれるほど旺盛に生育している。",
+        photos: ["parsley_250529_1.jpg"],
+      },
       { date: "6/5", tags: ["grow"], title: "液肥実施", text: "", photos: [] },
       {
         date: "6/7",
@@ -300,7 +307,7 @@ const VEGGIES = [
     timeline: [
       { date: "5/11", tags: ["grow"], title: "スナップエンドウ終了・根取り＆石灰水", text: "前作のスナップエンドウを終了し根を取り除き、石灰水で土壌調整。", photos: [] },
       { date: "5/17", tags: ["grow"], title: "元肥追加", text: "次作に向けて元肥を追加。", photos: [] },
-      { date: "5/29", tags: ["seed"], title: "種まき", text: "ポットに種まき（やや適当に播種）。", photos: [] },
+      { date: "5/29", tags: ["seed"], title: "種まき", text: "ポットに種まき（やや適当に播種）。", photos: ["moroheiya_250529_1.jpg"] },
       { date: "6/2", tags: ["grow"], title: "双葉複数発芽・間引き", text: "双葉がいくつも発芽。3株程度に間引き。", photos: ["moroheiya_250602_1.jpg"] },
       {
         date: "6/7",
@@ -371,6 +378,13 @@ const VEGGIES = [
     ],
     timeline: [
       { date: "4/29", tags: ["seed"], title: "種まき", text: "長鉢に種まき。", photos: [] },
+      {
+        date: "5/29",
+        tags: ["grow"],
+        title: "生育中",
+        text: "",
+        photos: ["rucola_250529_1.jpg"],
+      },
       {
         date: "6/1",
         tags: ["grow"],
@@ -478,7 +492,7 @@ const VEGGIES = [
     ],
     timeline: [
       { date: "4/29", tags: ["grow"], title: "購入・植え替え", text: "苗を購入し、プランターへ植え替え。", photos: [] },
-      { date: "5/29", tags: ["flower"], title: "白い花が開花・化成肥料", text: "白い花が咲き始めた。化成肥料を施用。", photos: [] },
+      { date: "5/29", tags: ["flower"], title: "白い花が開花・化成肥料", text: "白い花が咲き始めた。化成肥料を施用。", photos: ["chili_250529_1.jpg"] },
       { date: "6/1", tags: ["flower", "grow"], title: "一番花が着花・わき芽かき", text: "一番花が付いたタイミングでわき芽かきを実施。その下の枝までのわき芽を摘み取り、3本仕立てに整える。", photos: ["chili_250601_1.jpg"] },
       { date: "6/5", tags: ["grow"], title: "実が着き始める", text: "小さな実が着き始めた。", photos: [] },
       {
@@ -580,6 +594,13 @@ const VEGGIES = [
         photos: [],
       },
       {
+        date: "5/29",
+        tags: ["grow"],
+        title: "生育中",
+        text: "細い葉が伸びてきており、順調に生育中。",
+        photos: ["nira_250529_1.jpg"],
+      },
+      {
         date: "6/7",
         tags: ["grow"],
         title: "葉が伸びて密集",
@@ -661,6 +682,13 @@ const VEGGIES = [
       { date: "4/29", tags: ["grow"], title: "発芽確認", text: "種まきから約6日で芽が出始めた。", photos: [] },
       { date: "5/3頃", tags: ["grow"], title: "鉢まきの芽も発生・プリンカップ分を廃止", text: "別に鉢へ直まきした分も発芽。プリンカップより生育が良かったため、鉢まきの苗に絞ることに。", photos: [] },
       { date: "5/11", tags: ["grow"], title: "間引き", text: "生育の悪い苗を間引き。", photos: [] },
+      {
+        date: "5/29",
+        tags: ["grow"],
+        title: "生育中",
+        text: "",
+        photos: ["basil_250529_1.jpg"],
+      },
       { date: "5/31", tags: ["grow"], title: "本葉4枚・2株に最終間引き", text: "本葉4枚に成長したタイミングで2株に最終間引き。株間を広げて生育スペースを確保。", photos: [] },
       {
         date: "6/1",
@@ -711,13 +739,6 @@ const VEGGIES = [
         text: "液肥を実施。残る2株も摘芯を行った。",
         photos: ["basil_250719_1.jpg", "basil_250719_2.jpg"],
       },
-      {
-        date: "7/20",
-        tags: ["trouble", "harvest"],
-        title: "風通し改善のため剪定・収穫、今年は生育がやや小ぶり",
-        text: "風通しを良くするため剪定を兼ねて収穫。今年は例年ほど大きく育っておらず、土の影響が疑われる（連作の影響や梅雨長引きによる日照不足も一因の可能性）。",
-        photos: ["basil_250720_1.jpg", "basil_250720_2.jpg"],
-      },
     ],
   },
 
@@ -762,7 +783,7 @@ const VEGGIES = [
         tags: ["grow"],
         title: "液肥実施",
         text: "初回の液肥を実施。",
-        photos: [],
+        photos: ["shiso_250529_1.jpg"],
       },
       {
         date: "6/1",
@@ -1040,13 +1061,6 @@ const VEGGIES = [
         text: "実がようやく収穫できそうなサイズに育った。一方で頭頂部の葉が枯れており、ハモグリバエの被害と思われる症状を確認。上部の葉に特に被害が目立つ。",
         photos: ["cucumber_250719_1.jpg"],
       },
-      {
-        date: "7/20",
-        tags: ["harvest", "trouble"],
-        title: "1本初収穫（今期累計1本）・上部の葉を剪定",
-        text: "1本を初収穫。今期の収穫累計は1本。上部の葉の状態が良くないため剪定を実施。",
-        photos: ["cucumber_250720_1.jpg", "cucumber_250720_2.jpg", "cucumber_250720_3.jpg"],
-      },
     ],
   },
 
@@ -1083,7 +1097,7 @@ const VEGGIES = [
       "tomato_250615_1.jpg",
     ],
     timeline: [
-      { date: "5/29", tags: ["grow"], title: "購入・定植", text: "苗を購入し、プランター1つに定植。", photos: [] },
+      { date: "5/29", tags: ["grow"], title: "購入・定植", text: "苗を購入し、プランター1つに定植。", photos: ["tomato_250529_1.jpg"] },
       { date: "6/1", tags: ["grow"], title: "日当たりの良い場所へ移動・わき芽かき", text: "より日の当たる場所へプランターを移動。初回のわき芽かきを実施。小さな実も確認できる。", photos: ["tomato_250601_1.jpg"] },
       {
         date: "6/7",
