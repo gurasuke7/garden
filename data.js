@@ -89,6 +89,13 @@ const VEGGIES = [
       { date: "4/20", tags: ["grow"], title: "液肥実施", text: "", photos: [] },
       { date: "4/28", tags: ["harvest"], title: "収穫（3本）", text: "3本収穫。", photos: [] },
       { date: "4/29", tags: ["grow"], title: "液肥・葉面散布", text: "液肥の通常施用に加え、葉面散布も実施。", photos: [] },
+      {
+        date: "5/11",
+        tags: ["grow"],
+        title: "旺盛に生育中",
+        text: "葉が大きく広がり、ボリュームのある株に成長している。",
+        photos: ["parsley_250511_1.jpg"],
+      },
       { date: "5/12", tags: ["grow"], title: "液肥実施", text: "", photos: [] },
       { date: "5/19", tags: ["grow"], title: "液肥実施", text: "", photos: [] },
       { date: "5/28", tags: ["grow"], title: "液肥実施", text: "", photos: [] },
@@ -379,6 +386,13 @@ const VEGGIES = [
     timeline: [
       { date: "4/29", tags: ["seed"], title: "種まき", text: "長鉢に種まき。", photos: [] },
       {
+        date: "5/11",
+        tags: ["grow"],
+        title: "発芽・双葉が展開",
+        text: "長鉢のあちこちで双葉が展開し、発芽が順調に進んでいる。",
+        photos: ["rucola_250511_1.jpg"],
+      },
+      {
         date: "5/29",
         tags: ["grow"],
         title: "生育中",
@@ -587,6 +601,13 @@ const VEGGIES = [
     timeline: [
       { date: "4/29", tags: ["seed"], title: "種まき", text: "発芽適温18〜22℃を目安に種まき。", photos: ["nira_250429_1.jpg"] },
       {
+        date: "5/11",
+        tags: ["grow"],
+        title: "発芽・生育中",
+        text: "細い芽が長鉢いっぱいに発芽し、順調に生育中。",
+        photos: ["nira_250511_1.jpg"],
+      },
+      {
         date: "5/17",
         tags: ["grow"],
         title: "草丈6〜7cm・間引き実施",
@@ -681,7 +702,7 @@ const VEGGIES = [
       { date: "4/23", tags: ["seed"], title: "プリンカップに遮光して種まき", text: "小さなプリンカップに種をまき、遮光して発芽を促す。", photos: ["basil_250423_1.jpg"] },
       { date: "4/29", tags: ["grow"], title: "発芽確認", text: "種まきから約6日で芽が出始めた。", photos: [] },
       { date: "5/3頃", tags: ["grow"], title: "鉢まきの芽も発生・プリンカップ分を廃止", text: "別に鉢へ直まきした分も発芽。プリンカップより生育が良かったため、鉢まきの苗に絞ることに。", photos: [] },
-      { date: "5/11", tags: ["grow"], title: "間引き", text: "生育の悪い苗を間引き。", photos: [] },
+      { date: "5/11", tags: ["grow"], title: "間引き", text: "生育の悪い苗を間引き。", photos: ["basil_250511_1.jpg"] },
       {
         date: "5/29",
         tags: ["grow"],
