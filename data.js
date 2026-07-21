@@ -505,7 +505,7 @@ const VEGGIES = [
       "chili_250615_2.jpg",
     ],
     timeline: [
-      { date: "4/29", tags: ["grow"], title: "購入・植え替え", text: "苗を購入し、プランターへ植え替え。", photos: ["chili_250429_1.jpg", "chili_250429_2.jpg"] },
+      { date: "4/29", tags: ["grow"], title: "購入・植え替え", text: "苗を購入し、プランターへ植え替え。", photos: ["chili_250429_1.jpg"] },
       { date: "5/29", tags: ["flower"], title: "白い花が開花・化成肥料", text: "白い花が咲き始めた。化成肥料を施用。", photos: ["chili_250529_1.jpg"] },
       { date: "6/1", tags: ["flower", "grow"], title: "一番花が着花・わき芽かき", text: "一番花が付いたタイミングでわき芽かきを実施。その下の枝までのわき芽を摘み取り、3本仕立てに整える。", photos: ["chili_250601_1.jpg"] },
       { date: "6/5", tags: ["grow"], title: "実が着き始める", text: "小さな実が着き始めた。", photos: [] },
