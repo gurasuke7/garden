@@ -491,7 +491,7 @@ const VEGGIES = [
       "chili_250615_2.jpg",
     ],
     timeline: [
-      { date: "4/29", tags: ["grow"], title: "購入・植え替え", text: "苗を購入し、プランターへ植え替え。", photos: [] },
+      { date: "4/29", tags: ["grow"], title: "購入・植え替え", text: "苗を購入し、プランターへ植え替え。", photos: ["chili_250429_1.jpg", "chili_250429_2.jpg"] },
       { date: "5/29", tags: ["flower"], title: "白い花が開花・化成肥料", text: "白い花が咲き始めた。化成肥料を施用。", photos: ["chili_250529_1.jpg"] },
       { date: "6/1", tags: ["flower", "grow"], title: "一番花が着花・わき芽かき", text: "一番花が付いたタイミングでわき芽かきを実施。その下の枝までのわき芽を摘み取り、3本仕立てに整える。", photos: ["chili_250601_1.jpg"] },
       { date: "6/5", tags: ["grow"], title: "実が着き始める", text: "小さな実が着き始めた。", photos: [] },
@@ -585,7 +585,7 @@ const VEGGIES = [
       "nira_250615_1.jpg",
     ],
     timeline: [
-      { date: "4/29", tags: ["seed"], title: "種まき", text: "発芽適温18〜22℃を目安に種まき。", photos: [] },
+      { date: "4/29", tags: ["seed"], title: "種まき", text: "発芽適温18〜22℃を目安に種まき。", photos: ["nira_250429_1.jpg"] },
       {
         date: "5/17",
         tags: ["grow"],
@@ -678,7 +678,7 @@ const VEGGIES = [
       "basil_250621_1.jpg",
     ],
     timeline: [
-      { date: "4/23", tags: ["seed"], title: "プリンカップに遮光して種まき", text: "小さなプリンカップに種をまき、遮光して発芽を促す。", photos: [] },
+      { date: "4/23", tags: ["seed"], title: "プリンカップに遮光して種まき", text: "小さなプリンカップに種をまき、遮光して発芽を促す。", photos: ["basil_250423_1.jpg"] },
       { date: "4/29", tags: ["grow"], title: "発芽確認", text: "種まきから約6日で芽が出始めた。", photos: [] },
       { date: "5/3頃", tags: ["grow"], title: "鉢まきの芽も発生・プリンカップ分を廃止", text: "別に鉢へ直まきした分も発芽。プリンカップより生育が良かったため、鉢まきの苗に絞ることに。", photos: [] },
       { date: "5/11", tags: ["grow"], title: "間引き", text: "生育の悪い苗を間引き。", photos: [] },
@@ -738,6 +738,13 @@ const VEGGIES = [
         title: "液肥実施・他2株も摘芯",
         text: "液肥を実施。残る2株も摘芯を行った。",
         photos: ["basil_250719_1.jpg", "basil_250719_2.jpg"],
+      },
+      {
+        date: "7/20",
+        tags: ["trouble", "harvest"],
+        title: "風通し改善のため剪定・収穫、今年は生育がやや小ぶり",
+        text: "風通しを良くするため剪定を兼ねて収穫。今年は例年ほど大きく育っておらず、土の影響が疑われる（連作の影響や梅雨長引きによる日照不足も一因の可能性）。",
+        photos: ["basil_250720_1.jpg", "basil_250720_2.jpg"],
       },
     ],
   },
@@ -1061,6 +1068,13 @@ const VEGGIES = [
         text: "実がようやく収穫できそうなサイズに育った。一方で頭頂部の葉が枯れており、ハモグリバエの被害と思われる症状を確認。上部の葉に特に被害が目立つ。",
         photos: ["cucumber_250719_1.jpg"],
       },
+      {
+        date: "7/20",
+        tags: ["harvest", "trouble"],
+        title: "1本初収穫（今期累計1本）・上部の葉を剪定",
+        text: "1本を初収穫。今期の収穫累計は1本。上部の葉の状態が良くないため剪定を実施。",
+        photos: ["cucumber_250720_1.jpg", "cucumber_250720_2.jpg", "cucumber_250720_3.jpg"],
+      },
     ],
   },
 
@@ -1254,5 +1268,12 @@ const LOG = [
     title: "モロヘイヤ・ルッコラの土を再生へ",
     text: "撤去したモロヘイヤの土は、湿らせて透明ビニール袋に入れ天日で消毒。ルッコラの土は乾燥させてから根を取り除き、再利用の準備を進める。",
     photo: "log_250716_soil1.jpg",
+  },
+  {
+    date: "7/20",
+    tags: ["trouble"],
+    title: "ダニ太郎を初使用（きゅうり・ミニトマト・メロン）",
+    text: "毎日のように葉裏へ葉水を行っているがハダニが消えないため、ダニ太郎（20ml計量容器付）をきゅうり・ミニトマト・メロンに施行。",
+    photo: "log_250720_danitaro.jpg",
   },
 ];
