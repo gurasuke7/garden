@@ -43,6 +43,11 @@ main{max-width:900px;margin:0 auto;padding:0 24px 80px;}
 .intro-section h2{font-family:'Shippori Mincho',serif;font-size:20px;font-weight:600;color:var(--moss);margin-bottom:16px;}
 .intro-section p{font-size:15px;color:#4a3f35;max-width:640px;line-height:2;}
 .highlight-box{background:linear-gradient(135deg,#f0ede6,#e8f0e4);border-left:3px solid var(--moss);padding:16px 20px;margin-top:20px;font-size:14px;color:var(--soil);line-height:1.9;}
+.updates-box{background:var(--cream);border:1px solid #e0d9d0;padding:16px 20px;margin-top:20px;}
+.updates-box h3{font-family:'Shippori Mincho',serif;font-size:14px;font-weight:600;color:var(--moss);margin-bottom:10px;}
+.updates-list{list-style:none;font-size:12.5px;color:#5a4a3a;line-height:2.1;}
+.updates-list li{display:flex;gap:10px;}
+.updates-list .u-date{font-family:'DM Mono',monospace;color:var(--bark);flex-shrink:0;letter-spacing:.05em;}
 .env-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:24px 0;}
 .env-card{background:var(--cream);border:1px solid #e0d9d0;padding:16px;text-align:center;}
 .env-card .env-icon{font-size:24px;margin-bottom:6px;display:block;}
@@ -162,6 +167,10 @@ footer p{margin-bottom:5px;}
     <h2>このブログについて</h2>
     <p>東京の西向きベランダ、隣接する壁で午前中の日差しがほぼゼロという条件。「そんな場所で野菜は育つの？」という疑問からスタートしました。同じ環境で悩んでいる方に少しでも参考になればと思い記録を公開しています。</p>
     <div class="highlight-box">💡 <strong>この記録が役立つ方：</strong>西向きベランダ・日当たりが悪い・壁際で菜園に挑戦したい方。「日照不足でも育つ野菜」「西日だけでの生長データ」をリアルに記録しています。</div>
+    <div class="updates-box">
+      <h3>📝 更新履歴</h3>
+      <ul class="updates-list" id="updates-list"></ul>
+    </div>
     <div class="env-grid" id="env-grid"></div>
   </section>
 
@@ -198,6 +207,10 @@ document.getElementById('hero-photos').innerHTML = (SITE.heroPhotos||[]).map(p=>
 // 環境
 document.getElementById('env-grid').innerHTML = ENV.map(e=>`
   <div class="env-card"><span class="env-icon">${e.icon}</span><span class="env-label">${esc(e.label)}</span><span class="env-value">${esc(e.value)}</span></div>`).join('');
+
+// 更新履歴
+document.getElementById('updates-list').innerHTML = (SITE_UPDATES||[]).slice(0,10).map(u=>`
+  <li><span class="u-date">${esc(u.date)}</span><span>${esc(u.text)}</span></li>`).join('');
 
 // 設備
 document.getElementById('setup-photos').innerHTML = (SETUP.photos||[]).map(p=>`
