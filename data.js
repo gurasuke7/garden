@@ -18,6 +18,8 @@ const SITE = {
 
 // サイト更新履歴（新しい順・最大10件程度を表示）
 const SITE_UPDATES = [
+  { date: "8/7", text: "バジル収穫、ミニトマト8個収穫（今期累計15個）を追加" },
+  { date: "8/6", text: "バジル・紫蘇の収穫（8/6）を追加" },
   { date: "8/2", text: "唐辛子5個収穫、パセリ・ニラ・メロン・バジル・ミニトマト・紫蘇の8/2記録を追加" },
   { date: "7/27", text: "パセリ・ニラの生育記録を追加" },
   { date: "7/27", text: "唐辛子の回復、メロン・バジルの生育写真を追加" },
@@ -866,6 +868,20 @@ const VEGGIES = [
         text: "収穫できそうな状態まで生育。液肥を実施。",
         photos: ["basil_250802_1.jpg", "basil_250802_2.jpg"],
       },
+      {
+        date: "8/6",
+        tags: ["harvest"],
+        title: "収穫・一部をカプレーゼに",
+        text: "収穫。収穫した一部をトマト・モッツァレラと合わせてカプレーゼにした。",
+        photos: ["basil_250806_1.jpg", "basil_250806_2.jpg"],
+      },
+      {
+        date: "8/7",
+        tags: ["harvest"],
+        title: "収穫",
+        text: "収穫。",
+        photos: ["basil_250807_1.jpg"],
+      },
     ],
   },
 
@@ -1029,6 +1045,13 @@ const VEGGIES = [
         title: "2株でハダニ大量発生・ポット株は終了・液肥実施",
         text: "2株でハダニが大量発生。ポットの株は状態が悪く終了とした。液肥を実施。",
         photos: ["shiso_250802_1.jpg", "shiso_250802_2.jpg", "shiso_250802_3.jpg"],
+      },
+      {
+        date: "8/6",
+        tags: ["harvest"],
+        title: "収穫",
+        text: "収穫。",
+        photos: ["shiso_250806_1.jpg"],
       },
     ],
   },
@@ -1344,6 +1367,13 @@ const VEGGIES = [
         title: "アーリーセーフ散布",
         text: "アーリーセーフを散布。",
         photos: ["tomato_250802_1.jpg"],
+      },
+      {
+        date: "8/7",
+        tags: ["harvest"],
+        title: "8個収穫（今期累計15個）",
+        text: "8個収穫。今期の収穫累計は15個。",
+        photos: ["tomato_250807_1.jpg", "tomato_250807_2.jpg"],
       },
     ],
   },
