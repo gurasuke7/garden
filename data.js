@@ -350,6 +350,13 @@ const VEGGIES = [
         photos: ["melon_250808_1.jpg", "melon_250808_2.jpg"],
       },
       {
+        date: "8/13",
+        tags: ["flower"],
+        title: "雌花初開花・人工授粉を実施",
+        text: "雌花が初めて開花。雄花を切り取り、人工授粉を試みた。",
+        photos: ["melon_250813_1.jpg", "melon_250813_2.jpg", "melon_250813_3.jpg"],
+      },
+      {
         date: "8/16",
         tags: ["grow"],
         title: "子づる2本が19枚に・摘心予定",
