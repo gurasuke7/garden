@@ -120,6 +120,12 @@ main{max-width:900px;margin:0 auto;padding:0 24px 80px;}
 .vtl-photos:empty{display:none;}
 .vtl-photos img{width:100%;height:175px;object-fit:cover;display:block;border:1px solid #e0d9d0;transition:transform .3s;cursor:pointer;}
 .vtl-photos img:hover{transform:scale(1.03);}
+.sensitive-wrap{position:relative;width:100%;height:175px;overflow:hidden;border:1px solid #e0d9d0;cursor:pointer;}
+.sensitive-wrap img{width:100%;height:100%;object-fit:cover;display:block;filter:blur(18px) brightness(.75);transition:filter .3s;}
+.sensitive-wrap.revealed img{filter:none;}
+.sensitive-label{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;color:#fff;font-family:'DM Mono',monospace;font-size:12px;text-align:center;letter-spacing:.05em;background:rgba(0,0,0,.2);text-shadow:0 1px 3px rgba(0,0,0,.7);}
+.sensitive-wrap.revealed .sensitive-label{display:none;}
+.sensitive-label span{font-size:10px;opacity:.85;margin-top:4px;}
 
 .tl-item{display:grid;grid-template-columns:76px 1fr;gap:18px;padding:18px 0;border-bottom:1px dashed #e0d9d0;}
 .tl-item:last-child{border-bottom:none;}
@@ -231,7 +237,17 @@ const tagHtml = tags => (tags||[]).map(t=>{
 
 const photosHtml = (photos) => {
   if(!photos || !photos.length) return '';
-  return `<div class="vtl-photos">${photos.map(p=>`<img src="${p}" alt="" loading="lazy" onclick="openLightbox(this.src)">`).join('')}</div>`;
+  return `<div class="vtl-photos">${photos.map(p=>{
+    const src = (typeof p === 'string') ? p : p.src;
+    const sensitive = (typeof p === 'object') && p.sensitive;
+    if(sensitive){
+      return `<div class="sensitive-wrap" onclick="this.classList.toggle('revealed')">
+        <img src="${src}" alt="" loading="lazy" onclick="event.stopPropagation(); if(this.parentElement.classList.contains('revealed')) openLightbox(this.src);">
+        <div class="sensitive-label">⚠️ 虫画像注意<span>タップで表示</span></div>
+      </div>`;
+    }
+    return `<img src="${src}" alt="" loading="lazy" onclick="openLightbox(this.src)">`;
+  }).join('')}</div>`;
 };
 
 // 野菜カード
