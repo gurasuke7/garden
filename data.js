@@ -18,6 +18,8 @@ const SITE = {
 
 // サイト更新履歴（新しい順・最大10件程度を表示）
 const SITE_UPDATES = [
+  { date: "9/16", text: "サイト機能を追加：栽培中/年度・時期タブ＋野菜名検索＋記録内容の全文検索と連動する上部ナビ、設備セクションの折りたたみ表示、費用（購入品）ページを新設" },
+  { date: "9/15", text: "バジル（四角プランター）・パセリの今期栽培終了を追加" },
   { date: "9/11", text: "曇り・雨続きの天候メモ、メロン着果25日目、唐辛子新芽整理、ニラ・紫蘇の生育、バジル・パセリの終了検討を追加" },
   { date: "9/5", text: "曇り続きの天候メモ、唐辛子・ニラ・バジル・紫蘇・パセリの液肥、メロン着果19日目（直径11cm・ひび割れ）を追加" },
   { date: "9/2", text: "紫蘇の収穫を追加" },
@@ -85,7 +87,8 @@ const VEGGIES = [
     name: "パセリ",
     sub: "イタリアンパセリ",
     color: "olive",
-    status: "🌱 栽培中",
+    status: "🏁 栽培終了（9/15で終了）",
+    season: "2025年秋蒔き",
     westRating: 5,
     basicData: [
       { key: "収穫開始の目安", val: "草丈20cm・本葉15枚以上" },
@@ -291,6 +294,13 @@ const VEGGIES = [
           { src: "parsley_260911_3.jpg", sensitive: true },
         ],
       },
+      {
+        date: "9/15",
+        tags: ["end"],
+        title: "今期栽培終了",
+        text: "ハダニ被害と涼しさによる生育の弱まりを受け、今期の栽培を終了。",
+        photos: [],
+      },
     ],
   },
 
@@ -301,6 +311,7 @@ const VEGGIES = [
     sub: "種まきから育苗中",
     color: "amber",
     status: "🌱 栽培中",
+    season: "2026年春蒔き",
     westRating: 2,
     basicData: [
       { key: "種まき深さ", val: "1cm" },
@@ -470,6 +481,7 @@ const VEGGIES = [
     sub: "そら豆の後作",
     color: "moss",
     status: "🥀 栽培終了（失敗）",
+    season: "2026年春蒔き",
     points: [
       "気温がしっかり上がった5月下旬の種まきが良い",
       "定植後3日間は少し日が当たる程度の場所に置く",
@@ -541,6 +553,7 @@ const VEGGIES = [
     sub: "種まきから育苗",
     color: "teal",
     status: "🏁 栽培終了（収穫完了）",
+    season: "2026年春蒔き",
     westRating: 5,
     basicData: [
       { key: "追肥開始", val: "背丈10cm頃から液肥" },
@@ -640,6 +653,7 @@ const VEGGIES = [
     sub: "",
     color: "moss",
     status: "📋 記録追加予定",
+    season: "2026年秋蒔き",
     westRating: 0,
     basicData: [],
     points: [],
@@ -656,6 +670,7 @@ const VEGGIES = [
     sub: "",
     color: "amber",
     status: "🌶️ 結実中",
+    season: "2026年春蒔き",
     westRating: 3,
     basicData: [
       { key: "仕立て方", val: "3本仕立て" },
@@ -825,6 +840,7 @@ const VEGGIES = [
     sub: "種まきから育苗中",
     color: "olive",
     status: "🌱 栽培中",
+    season: "2026年春蒔き",
     westRating: 4,
     basicData: [
       { key: "発芽適温", val: "18〜22℃" },
@@ -993,7 +1009,8 @@ const VEGGIES = [
     name: "バジル",
     sub: "種まきから育苗",
     color: "moss",
-    status: "🌱 栽培中",
+    status: "🏁 栽培終了（9/15で終了）",
+    season: "2026年春蒔き",
     westRating: 3,
     basicData: [
       { key: "摘芯タイミング", val: "草丈20〜25cmで先端2〜3節分を摘む" },
@@ -1164,6 +1181,13 @@ const VEGGIES = [
         text: "そろそろ栽培終了にするか検討中。種は確保済みのため、無理に育て続ける必要はない。",
         photos: ["basil_260911_1.jpg", "basil_260911_2.jpg"],
       },
+      {
+        date: "9/15",
+        tags: ["end"],
+        title: "今期栽培終了（四角プランター）",
+        text: "四角プランターでの栽培を終了。種は確保済み。",
+        photos: [],
+      },
     ],
   },
 
@@ -1174,6 +1198,7 @@ const VEGGIES = [
     sub: "零れ種でスタート",
     color: "teal",
     status: "🌱 栽培中",
+    season: "2026年春蒔き",
     westRating: 4,
     basicData: [
       { key: "スタート", val: "零れ種" },
@@ -1401,6 +1426,7 @@ const VEGGIES = [
     sub: "",
     color: "moss",
     status: "🏁 栽培終了（今期は収穫少なめで終了）",
+    season: "2026年春蒔き",
     westRating: 3,
     basicData: [
       { key: "追肥開始", val: "本葉3枚から1〜2週に1回" },
@@ -1587,6 +1613,7 @@ const VEGGIES = [
     sub: "",
     color: "bark",
     status: "🏁 栽培終了（今期は8/31で終了）",
+    season: "2026年春蒔き",
     westRating: 3,
     basicData: [
       { key: "追肥", val: "定植後2〜3週・化成肥料2週に1回 or 液肥週1" },
@@ -1876,4 +1903,9 @@ const LOG = [
     text: "この一週間も曇りや雨が続き、30℃を超えた日は1〜2日程度だった。本日の最高気温は21℃予想。",
     photo: "",
   },
+];
+
+// 費用記録：date は "YYYY-MM-DD" 形式、category は「種苗」「資材」「肥料・薬」「その他」の4種から選択
+// 例: { date: "2026-09-15", category: "資材", item: "培養土 14L", amount: 980, vegetableId: "melon", note: "" }
+const EXPENSES = [
 ];
