@@ -142,6 +142,58 @@ main{max-width:900px;margin:0 auto;padding:0 24px 80px;}
 footer{background:var(--soil);color:var(--dust);text-align:center;padding:40px;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.1em;}
 footer p{margin-bottom:5px;}
 
+/* ==== 野菜フィルター機能 ==== */
+.filter-bar{margin-bottom:26px;}
+.filter-group-label{font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.18em;color:var(--bark);text-transform:uppercase;margin:14px 0 6px;}
+.filter-group-label:first-child{margin-top:0;}
+.filter-tab-row{display:flex;flex-wrap:wrap;gap:7px;}
+.filter-tab{font-family:'DM Mono',monospace;font-size:11px;padding:6px 14px;border:1px solid var(--dust);background:var(--cream);color:var(--bark);border-radius:20px;cursor:pointer;transition:all .2s;white-space:nowrap;}
+.filter-tab:hover{border-color:var(--moss);}
+.filter-tab.active{background:var(--moss);border-color:var(--moss);color:var(--cream);}
+.filter-tab.growing-tab.active{background:var(--leaf);border-color:var(--leaf);}
+.filter-search-row{margin-top:12px;display:flex;flex-direction:column;gap:8px;}
+.filter-search-input{font-family:'Noto Serif JP',serif;font-size:13px;padding:9px 14px;border:1px solid var(--dust);background:var(--cream);color:var(--ink);border-radius:4px;width:100%;}
+.filter-search-input:focus{outline:none;border-color:var(--moss);}
+.filter-search-input.content{border-color:var(--sun);background:#fdf9ee;}
+.filter-chip-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;}
+.filter-chip{display:flex;align-items:center;gap:6px;font-family:'Shippori Mincho',serif;font-size:13px;padding:7px 14px;border:1px solid #e0d9d0;background:var(--cream);color:var(--soil);border-radius:20px;cursor:pointer;text-decoration:none;transition:all .2s;}
+.filter-chip:hover{border-color:var(--moss);box-shadow:0 2px 8px rgba(61,43,31,.08);}
+.filter-chip .fc-status{font-family:'DM Mono',monospace;font-size:9px;padding:2px 7px;border-radius:10px;background:rgba(122,170,110,.2);color:var(--moss);}
+.filter-chip .fc-status.ended{background:rgba(107,76,53,.15);color:var(--bark);}
+.filter-result-count{font-family:'DM Mono',monospace;font-size:10.5px;color:var(--bark);margin-top:12px;}
+.filter-no-result{font-size:12.5px;color:var(--bark);padding:12px 0;}
+.content-result-item{display:block;border:1px solid #e0d9d0;background:var(--cream);padding:12px 16px;margin-top:8px;text-decoration:none;color:var(--ink);cursor:pointer;transition:all .2s;}
+.content-result-item:hover{border-color:var(--sun);box-shadow:0 2px 10px rgba(61,43,31,.08);}
+.cr-head{display:flex;align-items:center;gap:8px;font-family:'DM Mono',monospace;font-size:10.5px;color:var(--bark);margin-bottom:5px;}
+.cr-head .cr-veg{font-family:'Shippori Mincho',serif;font-size:13px;color:var(--soil);font-weight:600;}
+.cr-snippet{font-size:12.5px;color:#5a4a3a;line-height:1.7;}
+.cr-snippet mark,.filter-chip mark{background:var(--sun);color:var(--soil);padding:0 2px;border-radius:2px;}
+
+.vtl-item{scroll-margin-top:60px;}
+.vtl-item.flash{background:#fdf3d6;}
+
+.back-to-top{position:fixed;right:20px;bottom:24px;width:46px;height:46px;border-radius:50%;background:var(--moss);color:var(--cream);border:none;font-size:18px;cursor:pointer;box-shadow:0 4px 14px rgba(61,43,31,.3);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;z-index:200;}
+.back-to-top.show{opacity:1;pointer-events:auto;}
+.back-to-top:hover{transform:translateY(-2px);}
+
+/* ==== 設備セクションの折りたたみ ==== */
+.section-header.setup-toggle{cursor:pointer;user-select:none;}
+.section-header.setup-toggle:hover h2{color:var(--moss);}
+.toggle-arrow{margin-left:auto;font-family:'DM Mono',monospace;font-size:13px;color:var(--bark);transition:transform .25s;}
+.toggle-arrow.open{transform:rotate(90deg);}
+.setup-content{overflow:hidden;max-height:0;transition:max-height .35s ease;}
+.setup-content:not(.collapsed){max-height:3000px;}
+
+/* ==== 費用セクション ==== */
+.cost-total{font-family:'DM Mono',monospace;font-size:14px;color:var(--soil);font-weight:600;margin-top:14px;padding:10px 16px;background:var(--cream);border:1px solid #e0d9d0;display:inline-block;}
+.cost-item{display:flex;align-items:center;gap:14px;padding:12px 4px;border-bottom:1px dashed #e0d9d0;}
+.cost-date{font-family:'DM Mono',monospace;font-size:11px;color:var(--moss);width:82px;flex-shrink:0;}
+.cost-body{flex:1;min-width:0;}
+.cost-cat{display:inline-block;font-family:'DM Mono',monospace;font-size:10px;padding:2px 8px;border-radius:10px;background:rgba(122,170,110,.18);color:var(--moss);margin-right:8px;}
+.cost-name{font-size:13px;color:var(--soil);}
+.cost-note{font-size:11.5px;color:#5a4a3a;margin-top:3px;}
+.cost-amount{font-family:'DM Mono',monospace;font-size:13px;color:var(--bark);white-space:nowrap;}
+
 @media(max-width:580px){
   .veggie-body,.setup-photo-row{grid-template-columns:1fr;}
   .hero-photos{grid-template-columns:1fr;max-height:none;}
@@ -169,6 +221,19 @@ footer p{margin-bottom:5px;}
 </nav>
 
 <main>
+  <div class="filter-bar" id="topFilterBar">
+    <div class="filter-group-label">基本</div>
+    <div class="filter-tab-row" id="filterTabsBasic"></div>
+    <div class="filter-group-label">年度・時期</div>
+    <div class="filter-tab-row" id="filterTabsSeason"></div>
+    <div class="filter-search-row">
+      <input class="filter-search-input" id="filterSearchName" placeholder="🔍 野菜名で絞り込み（例：メロン）">
+      <input class="filter-search-input content" id="filterSearchContent" placeholder="📝 記録内容で全文検索（例：剪定、液肥）">
+    </div>
+    <div class="filter-result-count" id="filterResultCount"></div>
+    <div id="filterContentResults"></div>
+  </div>
+
   <section class="intro-section">
     <h2>このブログについて</h2>
     <p>東京の西向きベランダ、隣接する壁で午前中の日差しがほぼゼロという条件。「そんな場所で野菜は育つの？」という疑問からスタートしました。同じ環境で悩んでいる方に少しでも参考になればと思い記録を公開しています。</p>
@@ -180,15 +245,34 @@ footer p{margin-bottom:5px;}
     <div class="env-grid" id="env-grid"></div>
   </section>
 
-  <div id="setup" class="section-header"><span class="section-num">01</span><h2>設備・資材</h2></div>
-  <div class="setup-photo-row" id="setup-photos"></div>
-  <div class="setup-grid" id="setup-cards"></div>
+  <div id="setup" class="section-header setup-toggle" onclick="toggleSetup()">
+    <span class="section-num">01</span><h2>設備・資材</h2>
+    <span class="toggle-arrow" id="setupArrow">▸</span>
+  </div>
+  <div class="setup-content collapsed" id="setupContent">
+    <div class="setup-photo-row" id="setup-photos"></div>
+    <div class="setup-grid" id="setup-cards"></div>
+  </div>
 
   <div class="section-header"><span class="section-num">02</span><h2>野菜別 栽培記録</h2></div>
+
   <div id="veggies"></div>
 
   <div id="log" class="section-header"><span class="section-num">03</span><h2>全体栽培ログ（時系列）</h2></div>
   <div class="timeline" id="overall-log"></div>
+
+  <div id="costs" class="section-header"><span class="section-num">04</span><h2>💰 費用</h2></div>
+  <div class="filter-bar" id="costsFilterBar">
+    <div class="filter-group-label">年度・時期</div>
+    <div class="filter-tab-row" id="costsTabsSeason"></div>
+    <div class="filter-group-label">カテゴリ</div>
+    <div class="filter-tab-row" id="costsTabsCategory"></div>
+    <div class="filter-search-row">
+      <input class="filter-search-input" id="costsSearch" placeholder="🔍 品目名・メモで検索（例：培養土、防虫ネット）">
+    </div>
+    <div class="cost-total" id="costsTotal"></div>
+  </div>
+  <div id="costsList"></div>
 </main>
 
 <footer>
@@ -197,6 +281,7 @@ footer p{margin-bottom:5px;}
 </footer>
 
 <div class="lightbox" id="lightbox"><img id="lightbox-img" alt=""></div>
+<button class="back-to-top" id="backToTop" title="トップへ戻る">↑</button>
 
 <script src="data.js"></script>
 <script>
@@ -224,10 +309,13 @@ document.getElementById('setup-photos').innerHTML = (SETUP.photos||[]).map(p=>`
 document.getElementById('setup-cards').innerHTML = (SETUP.cards||[]).map(c=>`
   <div class="setup-card"><h4>${esc(c.title)}</h4><ul>${c.items.map(i=>`<li>${esc(i)}</li>`).join('')}</ul></div>`).join('');
 
-// ナビ
-const navHtml = VEGGIES.map(v=>`<a href="#${v.id}">${v.emoji} ${esc(v.name.replace(/（例）/,''))}</a>`).join('')
-  + `<a href="#setup">🪴 設備</a><a href="#log">📋 全体ログ</a>`;
-document.getElementById('nav-links').innerHTML = navHtml;
+// ナビ（フィルター状態に応じて描画。関数本体は下部のフィルター機能ブロックで呼び出す）
+function renderNav(list){
+  const navHtml = list.map(v=>`<a href="#${v.id}">${v.emoji} ${esc(v.name.replace(/（例）/,''))}</a>`).join('')
+    + `<a href="#setup">🪴 設備</a><a href="#log">📋 全体ログ</a><a href="#costs">💰 費用</a>`;
+  document.getElementById('nav-links').innerHTML = navHtml;
+}
+renderNav(VEGGIES); // フィルター初期化前の暫定表示（すぐ下のブロックで栽培中のみに絞り込まれる）
 
 // タグ描画
 const tagHtml = tags => (tags||[]).map(t=>{
@@ -282,8 +370,8 @@ document.getElementById('veggies').innerHTML = VEGGIES.map(v=>{
       ${(v.timeline&&v.timeline.length)?`
       <div class="veggie-timeline">
         <h3>📅 栽培タイムライン</h3>
-        ${v.timeline.map(t=>`
-        <div class="vtl-item">
+        ${v.timeline.map((t,ti)=>`
+        <div class="vtl-item" id="tl-${v.id}-${ti}">
           <div class="vtl-date">${esc(t.date)}</div>
           <div class="vtl-body">
             <div class="vtl-tags">${tagHtml(t.tags)}</div>
@@ -327,7 +415,218 @@ const observer = new IntersectionObserver(entries=>{
   });
 },{threshold:0.25, rootMargin:'-54px 0px 0px 0px'});
 document.querySelectorAll('[id]').forEach(s=>{
-  if(['setup','log'].includes(s.id) || VEGGIES.some(v=>v.id===s.id)) observer.observe(s);
+  if(['setup','log','costs'].includes(s.id) || VEGGIES.some(v=>v.id===s.id)) observer.observe(s);
+});
+
+// 設備セクションの折りたたみ
+function toggleSetup(){
+  document.getElementById('setupContent').classList.toggle('collapsed');
+  document.getElementById('setupArrow').classList.toggle('open');
+}
+
+// ===== 野菜フィルター機能 =====
+const isEnded = v => /^(🏁|🥀)/.test(v.status||'');
+let fltBasic = 'growing';
+let fltSeason = null;
+let fltName = '';
+let fltContent = '';
+
+// "2026年春蒔き"のような文字列を新しい順に並べるための共通の並び替えキー
+function seasonOrderValue(s){
+  const m = (s||'').match(/(\d+)年(春|秋)/);
+  if(!m) return 0;
+  return parseInt(m[1])*10 + (m[2]==='秋'?1:0);
+}
+
+function fltSeasonList(){
+  const seasons = [...new Set(VEGGIES.map(v=>v.season).filter(Boolean))];
+  return seasons.sort((a,b)=>seasonOrderValue(b)-seasonOrderValue(a));
+}
+
+function fltTabButton(label, active, onClick, extraClass){
+  const b = document.createElement('button');
+  b.className = 'filter-tab' + (extraClass?(' '+extraClass):'') + (active?' active':'');
+  b.textContent = label;
+  b.onclick = onClick;
+  return b;
+}
+
+function fltRenderTabs(){
+  const basicWrap = document.getElementById('filterTabsBasic');
+  basicWrap.innerHTML = '';
+  basicWrap.appendChild(fltTabButton('すべて', fltBasic==='all' && !fltSeason, ()=>{fltBasic='all'; fltSeason=null; fltRefresh();}));
+  basicWrap.appendChild(fltTabButton('🌱 栽培中', fltBasic==='growing' && !fltSeason, ()=>{fltBasic='growing'; fltSeason=null; fltRefresh();}, 'growing-tab'));
+
+  const seasonWrap = document.getElementById('filterTabsSeason');
+  seasonWrap.innerHTML = '';
+  fltSeasonList().forEach(s=>{
+    seasonWrap.appendChild(fltTabButton(s, fltSeason===s, ()=>{fltSeason=s; fltBasic=null; fltRefresh();}));
+  });
+}
+
+function fltScoped(){
+  let list = VEGGIES;
+  if(fltSeason) list = list.filter(v=>v.season===fltSeason);
+  else if(fltBasic==='growing') list = list.filter(v=>!isEnded(v));
+  return list;
+}
+
+function fltNamedScoped(){
+  let list = fltScoped();
+  if(fltName.trim()) list = list.filter(v=>v.name.includes(fltName.trim()));
+  return list;
+}
+
+function fltHighlight(text, word){
+  const escaped = esc(text);
+  if(!word.trim()) return escaped;
+  const escWord = word.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+  return escaped.replace(new RegExp(escWord,'g'), m=>'<mark>'+m+'</mark>');
+}
+
+function fltRenderContentResults(){
+  const word = fltContent.trim();
+  let hits = [];
+  fltScoped().forEach(v=>{
+    (v.timeline||[]).forEach((t,i)=>{
+      const hay = (t.title||'') + ' ' + (t.text||'');
+      if(word && hay.includes(word)){
+        hits.push({veg:v, entry:t, idx:i});
+      }
+    });
+  });
+  document.getElementById('filterResultCount').textContent = hits.length + '件ヒット（「'+esc(word)+'」）';
+  const resultsWrap = document.getElementById('filterContentResults');
+  resultsWrap.innerHTML = '';
+  if(hits.length===0){ resultsWrap.innerHTML = '<div class="filter-no-result">一致する記録が見つかりません。</div>'; return; }
+  hits.forEach(h=>{
+    const a = document.createElement('a');
+    a.href = '#tl-'+h.veg.id+'-'+h.idx;
+    a.className = 'content-result-item';
+    a.innerHTML = '<div class="cr-head"><span class="cr-veg">'+h.veg.emoji+' '+esc(h.veg.name)+'</span><span>'+esc(h.entry.date)+'</span></div>'+
+      '<div class="cr-snippet">'+fltHighlight(h.entry.title,word)+'：'+fltHighlight(h.entry.text||'',word)+'</div>';
+    a.onclick = (e)=>{ e.preventDefault(); fltJumpToEntry(h.veg.id, h.idx); };
+    resultsWrap.appendChild(a);
+  });
+}
+
+function fltJumpToEntry(id, idx){
+  const el = document.getElementById('tl-'+id+'-'+idx);
+  if(!el) return;
+  el.scrollIntoView({behavior:'smooth', block:'center'});
+  el.classList.add('flash');
+  setTimeout(()=>el.classList.remove('flash'), 1600);
+}
+
+function fltRefresh(){
+  fltRenderTabs();
+  const scoped = fltNamedScoped();
+  renderNav(scoped);
+  document.getElementById('filterContentResults').innerHTML = '';
+  if(fltContent.trim()){
+    fltRenderContentResults();
+  } else {
+    document.getElementById('filterResultCount').textContent = scoped.length + '件（上部のナビから各記録へジャンプできます）';
+  }
+}
+
+document.getElementById('filterSearchName').addEventListener('input', e=>{
+  fltName = e.target.value;
+  if(fltName.trim()){ fltContent=''; document.getElementById('filterSearchContent').value=''; }
+  fltRefresh();
+});
+document.getElementById('filterSearchContent').addEventListener('input', e=>{
+  fltContent = e.target.value;
+  if(fltContent.trim()){ fltName=''; document.getElementById('filterSearchName').value=''; }
+  fltRefresh();
+});
+
+fltRefresh();
+
+// ===== 費用セクション =====
+let costsSeason = 'all';
+let costsCategory = 'all';
+let costsWord = '';
+
+// 費用の日付(YYYY-MM-DD)を野菜と同じ「◯◯年春蒔き/秋蒔き」の区分に変換
+// 3〜8月はその年の春蒔き、9〜12月はその年の秋蒔き、1〜2月は前年の秋蒔きシーズンの一部として扱う
+function costsSeasonOf(dateStr){
+  const [y, m] = (dateStr||'').split('-').map(Number);
+  if(!y || !m) return '';
+  if(m>=3 && m<=8) return y + '年春蒔き';
+  if(m>=9) return y + '年秋蒔き';
+  return (y-1) + '年秋蒔き';
+}
+function costsSeasonList(){
+  const seasons = [...new Set((EXPENSES||[]).map(e=>costsSeasonOf(e.date)).filter(Boolean))];
+  return seasons.sort((a,b)=>seasonOrderValue(b)-seasonOrderValue(a));
+}
+function costsCategoryList(){
+  return [...new Set((EXPENSES||[]).map(e=>e.category))];
+}
+function costsScoped(){
+  let list = EXPENSES||[];
+  if(costsSeason!=='all') list = list.filter(e=>costsSeasonOf(e.date)===costsSeason);
+  if(costsCategory!=='all') list = list.filter(e=>e.category===costsCategory);
+  if(costsWord.trim()){
+    const w = costsWord.trim();
+    list = list.filter(e=>(e.item+' '+(e.note||'')).includes(w));
+  }
+  return list;
+}
+
+function renderCostsTabs(){
+  const seasonWrap = document.getElementById('costsTabsSeason');
+  seasonWrap.innerHTML = '';
+  seasonWrap.appendChild(fltTabButton('すべて', costsSeason==='all', ()=>{costsSeason='all'; refreshCosts();}));
+  costsSeasonList().forEach(s=>{
+    seasonWrap.appendChild(fltTabButton(s, costsSeason===s, ()=>{costsSeason=s; refreshCosts();}));
+  });
+
+  const catWrap = document.getElementById('costsTabsCategory');
+  catWrap.innerHTML = '';
+  catWrap.appendChild(fltTabButton('すべて', costsCategory==='all', ()=>{costsCategory='all'; refreshCosts();}));
+  costsCategoryList().forEach(c=>{
+    catWrap.appendChild(fltTabButton(c, costsCategory===c, ()=>{costsCategory=c; refreshCosts();}));
+  });
+}
+
+function renderCostsList(){
+  const list = costsScoped().slice().sort((a,b)=> a.date < b.date ? 1 : -1);
+  const total = list.reduce((s,e)=>s+(e.amount||0),0);
+  document.getElementById('costsTotal').textContent = '合計：¥' + total.toLocaleString();
+  const wrap = document.getElementById('costsList');
+  if(list.length===0){
+    wrap.innerHTML = '<div class="filter-no-result">この条件の記録はまだありません。</div>';
+    return;
+  }
+  wrap.innerHTML = list.map(e=>`
+    <div class="cost-item">
+      <div class="cost-date">${esc(e.date)}</div>
+      <div class="cost-body">
+        <span class="cost-cat">${esc(e.category)}</span>
+        <span class="cost-name">${esc(e.item)}</span>
+        ${e.note?`<div class="cost-note">${esc(e.note)}</div>`:''}
+      </div>
+      <div class="cost-amount">¥${(e.amount||0).toLocaleString()}</div>
+    </div>`).join('');
+}
+
+function refreshCosts(){
+  renderCostsTabs();
+  renderCostsList();
+}
+document.getElementById('costsSearch').addEventListener('input', e=>{ costsWord = e.target.value; refreshCosts(); });
+refreshCosts();
+
+// ===== トップへ戻るボタン =====
+const backToTopBtn = document.getElementById('backToTop');
+window.addEventListener('scroll', ()=>{
+  if(window.scrollY > 400) backToTopBtn.classList.add('show');
+  else backToTopBtn.classList.remove('show');
+});
+backToTopBtn.addEventListener('click', ()=>{
+  window.scrollTo({top:0, behavior:'smooth'});
 });
 </script>
 
