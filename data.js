@@ -712,7 +712,7 @@ const VEGGIES = [
     westNote: "",
     photos: [],
     timeline: [
-      { date: "10/7", tags: ["seed"], title: "種まき", text: "中葉しゅんぎく（株立型・摘み取り型）の種をまく。", photos: [] },
+      { date: "10/7", tags: ["seed"], title: "種まき", text: "中葉しゅんぎく（株立型・摘み取り型）の種をまく。", photos: ["shungiku_251007_1.jpg"] },
       { date: "10/10", tags: ["grow"], title: "芽が出始めた", text: "", photos: [] },
       { date: "10/16", tags: ["grow"], title: "生育中", text: "", photos: ["shungiku_251016_1.jpg"] },
       { date: "10/17", tags: ["grow"], title: "間引き", text: "", photos: [] },
@@ -768,7 +768,7 @@ const VEGGIES = [
     westNote: "",
     photos: [],
     timeline: [
-      { date: "10/7", tags: ["seed"], title: "種をポットに3つ撒く", text: "", photos: [] },
+      { date: "10/7", tags: ["seed"], title: "種をポットに3つ撒く", text: "", photos: ["soramame_251007_1.jpg"] },
       { date: "10/11", tags: ["grow"], title: "芽が出始めた", text: "", photos: [] },
       { date: "10/16", tags: ["grow"], title: "生育中", text: "", photos: ["soramame_251016_1.jpg"] },
       { date: "10/28", tags: ["grow"], title: "定植", text: "根鉢が崩れてしまい、根を切って定植。", photos: [] },
@@ -825,7 +825,7 @@ const VEGGIES = [
     westNote: "",
     photos: [],
     timeline: [
-      { date: "10/7", tags: ["seed"], title: "種まき（3つずつ4ポット）", text: "", photos: [] },
+      { date: "10/7", tags: ["seed"], title: "種まき（3つずつ4ポット）", text: "", photos: ["snapendo_251007_1.jpg"] },
       { date: "10/11", tags: ["grow"], title: "1つ目の芽が出始めた", text: "", photos: [] },
       { date: "10/14", tags: ["grow"], title: "全ポットで発芽", text: "", photos: [] },
       { date: "10/16", tags: ["grow"], title: "早くも10cm越え", text: "生育が早く、既に10cmを超えている様子。", photos: ["snapendo_251016_1.jpg"] },
