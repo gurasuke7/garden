@@ -293,7 +293,7 @@ document.getElementById('site-title').innerHTML = esc(SITE.title).replace(/で/,
 document.title = SITE.title;
 document.getElementById('site-subtitle').textContent = SITE.subtitle;
 document.getElementById('site-badges').innerHTML = SITE.badges.map(b=>`<span class="badge">${esc(b)}</span>`).join('');
-document.getElementById('hero-photos').innerHTML = (SITE.heroPhotos||[]).map(p=>`<img src="${p}" alt="" loading="lazy">`).join('');
+document.getElementById('hero-photos').innerHTML = (SITE.heroPhotos||[]).map(p=>`<img src="${p}" alt="">`).join('');
 
 // 環境
 document.getElementById('env-grid').innerHTML = ENV.map(e=>`
@@ -305,7 +305,7 @@ document.getElementById('updates-list').innerHTML = (SITE_UPDATES||[]).slice(0,1
 
 // 設備
 document.getElementById('setup-photos').innerHTML = (SETUP.photos||[]).map(p=>`
-  <div><img src="${p.src}" alt="${esc(p.caption)}" loading="lazy"><div class="photo-caption">${esc(p.caption)}</div></div>`).join('');
+  <div><img src="${p.src}" alt="${esc(p.caption)}"><div class="photo-caption">${esc(p.caption)}</div></div>`).join('');
 document.getElementById('setup-cards').innerHTML = (SETUP.cards||[]).map(c=>`
   <div class="setup-card"><h4>${esc(c.title)}</h4><ul>${c.items.map(i=>`<li>${esc(i)}</li>`).join('')}</ul></div>`).join('');
 
@@ -330,16 +330,16 @@ const photosHtml = (photos) => {
     const sensitive = (typeof p === 'object') && p.sensitive;
     if(sensitive){
       return `<div class="sensitive-wrap" onclick="this.classList.toggle('revealed')">
-        <img src="${src}" alt="" loading="lazy" onclick="event.stopPropagation(); if(this.parentElement.classList.contains('revealed')) openLightbox(this.src);">
+        <img src="${src}" alt="" onclick="event.stopPropagation(); if(this.parentElement.classList.contains('revealed')) openLightbox(this.src);">
         <div class="sensitive-label">⚠️ 虫画像注意<span>タップで表示</span></div>
       </div>`;
     }
-    return `<img src="${src}" alt="" loading="lazy" onclick="openLightbox(this.src)">`;
+    return `<img src="${src}" alt="" onclick="openLightbox(this.src)">`;
   }).join('')}</div>`;
 };
 
 // 野菜カード
-document.getElementById('veggies').innerHTML = VEGGIES.map(v=>{
+function veggieCardHtml(v){
   const stars = v.westRating ? '★'.repeat(v.westRating)+'☆'.repeat(5-v.westRating) : '';
   return `
   <section id="${v.id}" class="veggie-section">
@@ -354,7 +354,7 @@ document.getElementById('veggies').innerHTML = VEGGIES.map(v=>{
           ${stars ? `<div class="west-rating" title="西向き適性">西向き適性 ${stars}</div>` : ''}
         </div>
       </div>
-      <div class="photo-strip">${(v.photos||[]).map(p=>`<img src="${p}" alt="" loading="lazy" onclick="openLightbox(this.src)">`).join('')}</div>
+      <div class="photo-strip">${(v.photos||[]).map(p=>`<img src="${p}" alt="" onclick="openLightbox(this.src)">`).join('')}</div>
       <div class="veggie-body">
         <div class="info-group">
           <h4>基本データ</h4>
@@ -383,7 +383,13 @@ document.getElementById('veggies').innerHTML = VEGGIES.map(v=>{
       </div>`:''}
     </div>
   </section>`;
-}).join('');
+}
+
+function renderVeggieCards(list){
+  document.getElementById('veggies').innerHTML = list.map(veggieCardHtml).join('');
+  // 表示された野菜セクションだけをアクティブ表示監視の対象にする
+  document.querySelectorAll('.veggie-section[id]').forEach(s => observer.observe(s));
+}
 
 // 全体ログ
 document.getElementById('overall-log').innerHTML = (LOG||[]).map(l=>`
@@ -393,7 +399,7 @@ document.getElementById('overall-log').innerHTML = (LOG||[]).map(l=>`
       <div>${tagHtml(l.tags)}</div>
       <h4>${esc(l.title)}</h4>
       <p>${esc(l.text||'')}</p>
-      ${l.photo?`<img class="tl-photo" src="${l.photo}" alt="" loading="lazy" onclick="openLightbox(this.src)">`:''}
+      ${l.photo?`<img class="tl-photo" src="${l.photo}" alt="" onclick="openLightbox(this.src)">`:''}
     </div>
   </div>`).join('');
 
@@ -438,8 +444,14 @@ function seasonOrderValue(s){
   return parseInt(m[1])*10 + (m[2]==='秋'?1:0);
 }
 
+// season フィールドは単一文字列("2026年春蒔き")または複数タグの配列(["2025年秋蒔き","2026年春蒔き"])のどちらも許容する
+function seasonsOf(v){
+  if(!v.season) return [];
+  return Array.isArray(v.season) ? v.season : [v.season];
+}
+
 function fltSeasonList(){
-  const seasons = [...new Set(VEGGIES.map(v=>v.season).filter(Boolean))];
+  const seasons = [...new Set(VEGGIES.flatMap(seasonsOf))];
   return seasons.sort((a,b)=>seasonOrderValue(b)-seasonOrderValue(a));
 }
 
@@ -466,7 +478,7 @@ function fltRenderTabs(){
 
 function fltScoped(){
   let list = VEGGIES;
-  if(fltSeason) list = list.filter(v=>v.season===fltSeason);
+  if(fltSeason) list = list.filter(v=>seasonsOf(v).includes(fltSeason));
   else if(fltBasic==='growing') list = list.filter(v=>!isEnded(v));
   return list;
 }
@@ -522,11 +534,12 @@ function fltRefresh(){
   fltRenderTabs();
   const scoped = fltNamedScoped();
   renderNav(scoped);
+  renderVeggieCards(scoped);
   document.getElementById('filterContentResults').innerHTML = '';
   if(fltContent.trim()){
     fltRenderContentResults();
   } else {
-    document.getElementById('filterResultCount').textContent = scoped.length + '件（上部のナビから各記録へジャンプできます）';
+    document.getElementById('filterResultCount').textContent = scoped.length + '件（本文・上部ナビともにこの条件で表示中）';
   }
 }
 
