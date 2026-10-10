@@ -191,6 +191,7 @@ footer p{margin-bottom:5px;}
 .cost-body{flex:1;min-width:0;}
 .cost-cat{display:inline-block;font-family:'DM Mono',monospace;font-size:10px;padding:2px 8px;border-radius:10px;background:rgba(122,170,110,.18);color:var(--moss);margin-right:8px;}
 .cost-name{font-size:13px;color:var(--soil);}
+.cost-thumb{width:44px;height:44px;object-fit:cover;border-radius:4px;border:1px solid #e0d9d0;flex-shrink:0;cursor:zoom-in;}
 .cost-note{font-size:11.5px;color:#5a4a3a;margin-top:3px;}
 .cost-amount{font-family:'DM Mono',monospace;font-size:13px;color:var(--bark);white-space:nowrap;}
 
@@ -621,6 +622,7 @@ function renderCostsList(){
         <span class="cost-name">${esc(e.item)}</span>
         ${e.note?`<div class="cost-note">${esc(e.note)}</div>`:''}
       </div>
+      ${e.photo?`<img class="cost-thumb" src="images/${esc(e.photo)}" alt="" onclick="openLightbox(this.src)">`:''}
       <div class="cost-amount">¥${(e.amount||0).toLocaleString()}</div>
     </div>`).join('');
 }
