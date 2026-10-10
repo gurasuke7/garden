@@ -622,7 +622,7 @@ function renderCostsList(){
         <span class="cost-name">${esc(e.item)}</span>
         ${e.note?`<div class="cost-note">${esc(e.note)}</div>`:''}
       </div>
-      ${e.photo?`<img class="cost-thumb" src="images/${esc(e.photo)}" alt="" onclick="openLightbox(this.src)">`:''}
+      ${e.photo?`<img class="cost-thumb" src="${esc(e.photo)}" alt="" onclick="openLightbox(this.src)">`:''}
       <div class="cost-amount">¥${(e.amount||0).toLocaleString()}</div>
     </div>`).join('');
 }
