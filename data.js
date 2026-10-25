@@ -18,6 +18,7 @@ const SITE = {
 
 // サイト更新履歴（新しい順・最大10件程度を表示）
 const SITE_UPDATES = [
+  { date: "10/25", text: "10/25の記録を追加（ルッコラ養液交換、にんにく芽7つ・養液装置設置、サンチュの葉の透明化、バジルなど）。パセリ10/18に追記" },
   { date: "10/22", text: "にんにくの発芽（5つ）、小松菜2列目の出芽・間引き、ルッコラ・サンチュ・パセリの10/22の記録を追加" },
   { date: "10/19", text: "にんにく10/13の記録に、培養液を入れたのは誤りだった旨を追記" },
   { date: "10/18", text: "にんにくの発芽確認（養液は水のみに訂正）と、パセリ・唐辛子・ニラ・紫蘇の10/18の記録を追加" },
@@ -1100,6 +1101,13 @@ const VEGGIES = [
         text: "",
         photos: ["sanchu2026aki_261022_1.jpg"],
       },
+      {
+        date: "10/25",
+        tags: ["grow","trouble"],
+        title: "葉が透明になる箇所が出た",
+        text: "葉に透明になっている箇所ができている。栄養不足、酸素不足、日光不足、急に涼しくなったことなどが原因か、特定はできていない。去年も同様のことがあったが、一時的だったように思う。",
+        photos: ["sanchu2026aki_261025_1.jpg"],
+      },
     ],
   },
 
@@ -1166,7 +1174,7 @@ const VEGGIES = [
         date: "10/18",
         tags: ["grow"],
         title: "生育中",
-        text: "",
+        text: "本葉が出始めて来た。",
         photos: ["parsley2026aki_261018_1.jpg"],
       },
       {
@@ -1175,6 +1183,13 @@ const VEGGIES = [
         title: "生育中",
         text: "",
         photos: ["parsley2026aki_261022_1.jpg"],
+      },
+      {
+        date: "10/25",
+        tags: ["grow"],
+        title: "生育中",
+        text: "",
+        photos: ["parsley2026aki_261025_1.jpg"],
       },
     ],
   },
@@ -1256,6 +1271,13 @@ const VEGGIES = [
         text: "2列目に撒いた種も出芽した。混み合ったところは間引いた。写真は間引き前。",
         photos: ["komatsuna_261022_1.jpg"],
       },
+      {
+        date: "10/25",
+        tags: ["grow"],
+        title: "生育中",
+        text: "",
+        photos: ["komatsuna_261025_1.jpg"],
+      },
     ],
   },
 
@@ -1316,6 +1338,13 @@ const VEGGIES = [
         text: "成長中。",
         photos: ["rucola2026aki_261022_1.jpg", "rucola2026aki_261022_2.jpg"],
       },
+      {
+        date: "10/25",
+        tags: ["grow"],
+        title: "水耕の養液交換・バーミキュライト増し",
+        text: "養液栽培の方は養液を交換し、バーミキュライトを増した。写真は増す前。",
+        photos: ["rucola2026aki_261025_1.jpg", "rucola2026aki_261025_2.jpg"],
+      },
     ],
   },
 
@@ -1373,6 +1402,13 @@ const VEGGIES = [
         title: "芽を5つ確認",
         text: "芽が5つ確認できた。",
         photos: ["garlic_261022_1.jpg"],
+      },
+      {
+        date: "10/25",
+        tags: ["grow"],
+        title: "芽は7つ・ハイポネックス装置を設置",
+        text: "芽は7つになった。植えたにんにくの種類がバラバラで、それぞれ成長速度が異なっている。ある程度成長してきた芽があるので、ハイポネックスの装置を設置した。",
+        photos: ["garlic_261025_1.jpg"],
       },
     ],
   },
@@ -1634,6 +1670,13 @@ const VEGGIES = [
         text: "",
         photos: ["chili_261018_1.jpg"],
       },
+      {
+        date: "10/25",
+        tags: ["grow"],
+        title: "生育中",
+        text: "",
+        photos: ["chili_261025_1.jpg"],
+      },
     ],
   },
 
@@ -1851,6 +1894,13 @@ const VEGGIES = [
         text: "",
         photos: ["nira_261018_1.jpg"],
       },
+      {
+        date: "10/25",
+        tags: ["grow"],
+        title: "生育中",
+        text: "",
+        photos: ["nira_261025_1.jpg"],
+      },
     ],
   },
 
@@ -2052,6 +2102,13 @@ const VEGGIES = [
         title: "今期栽培終了",
         text: "もう成長しなそうなので、ここで栽培を終了にする。",
         photos: ["basil_261005_1.jpg"],
+      },
+      {
+        date: "10/25",
+        tags: ["grow"],
+        title: "花がつきそうにない・種は採れない？",
+        text: "花はつかなそう。今年は種が取れないかもしれない。",
+        photos: ["basil_261025_1.jpg"],
       },
     ],
   },
@@ -2326,6 +2383,13 @@ const VEGGIES = [
         title: "生育中",
         text: "",
         photos: ["shiso_261018_1.jpg"],
+      },
+      {
+        date: "10/25",
+        tags: ["grow"],
+        title: "生育中",
+        text: "",
+        photos: ["shiso_261025_1.jpg"],
       },
     ],
   },
