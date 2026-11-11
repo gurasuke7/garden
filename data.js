@@ -18,6 +18,7 @@ const SITE = {
 
 // サイト更新履歴（新しい順・最大10件程度を表示）
 const SITE_UPDATES = [
+  { date: "11/11", text: "ルッコラ・サンチュの養液交換（11/11）と、マグァンプK・土のリサイクル材の費用（11/8分）を追加" },
   { date: "11/8", text: "スナップエンドウ（2026年秋蒔き）を新規追加。サンチュ15枚収穫・水足し、各野菜の11/8の記録とザルの費用（10/31分）を追加" },
   { date: "11/3", text: "ルッコラ・サンチュ（2026年秋蒔き）の養液交換の記録を追加" },
   { date: "10/30", text: "サンチュ今期初収穫（約17枚）と収穫のポイント、紫蘇の剪定、にんにく・小松菜・ルッコラ・ニラの10/30の記録を追加" },
@@ -1202,6 +1203,13 @@ const VEGGIES = [
         text: "水を足した。15枚収穫した。",
         photos: ["sanchu2026aki_261108_1.jpg", "sanchu2026aki_261108_2.jpg"],
       },
+      {
+        date: "11/11",
+        tags: ["grow"],
+        title: "養液交換",
+        text: "養液の交換を実施した。",
+        photos: ["sanchu2026aki_261111_1.jpg"],
+      },
     ],
   },
 
@@ -1487,6 +1495,13 @@ const VEGGIES = [
         title: "生育中",
         text: "写真は土栽培と水耕栽培。",
         photos: ["rucola2026aki_261108_1.jpg", "rucola2026aki_261108_2.jpg"],
+      },
+      {
+        date: "11/11",
+        tags: ["grow"],
+        title: "養液交換",
+        text: "養液の交換を実施した。写真は土栽培と水耕栽培。",
+        photos: ["rucola2026aki_261111_1.jpg", "rucola2026aki_261111_2.jpg"],
       },
     ],
   },
@@ -3192,4 +3207,6 @@ const EXPENSES = [
   { date: "2026-10-12", category: "用具", item: "キッチンスポンジ8個入り", amount: 110, note: "", photo: "cost_261012_sponge.jpg" },
   { date: "2026-10-12", category: "用具", item: "持ち手付メッシュステンレスザル21cm", amount: 220, note: "", photo: "cost_261012_strainer.jpg" },
   { date: "2026-10-31", category: "用具", item: "ザル21cm（手持ちと同サイズ・2個目）", amount: 158, note: "", photo: "cost_261031_strainer.jpg" },
+  { date: "2026-11-08", category: "肥料・薬", item: "マグァンプK 中粒 1.1kg", amount: 1064, note: "", photo: "cost_261108_magamp.jpg" },
+  { date: "2026-11-08", category: "用土", item: "ハイポネックス 土のリサイクル材 5L", amount: 744, note: "", photo: "cost_261108_soil_recycle.jpg" },
 ];
