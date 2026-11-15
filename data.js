@@ -18,6 +18,7 @@ const SITE = {
 
 // サイト更新履歴（新しい順・最大10件程度を表示）
 const SITE_UPDATES = [
+  { date: "11/15", text: "にんにく・小松菜・サンチュ・パセリ・紫蘇・ニラ・ルッコラの11/15の記録を追加" },
   { date: "11/11", text: "ルッコラ・サンチュの養液交換（11/11）と、マグァンプK・土のリサイクル材の費用（11/8分）を追加" },
   { date: "11/8", text: "スナップエンドウ（2026年秋蒔き）を新規追加。サンチュ15枚収穫・水足し、各野菜の11/8の記録とザルの費用（10/31分）を追加" },
   { date: "11/3", text: "ルッコラ・サンチュ（2026年秋蒔き）の養液交換の記録を追加" },
@@ -1210,6 +1211,13 @@ const VEGGIES = [
         text: "養液の交換を実施した。",
         photos: ["sanchu2026aki_261111_1.jpg"],
       },
+      {
+        date: "11/15",
+        tags: ["grow"],
+        title: "生育中",
+        text: "写真は全体と根の様子。",
+        photos: ["sanchu2026aki_261115_1.jpg", "sanchu2026aki_261115_2.jpg"],
+      },
     ],
   },
 
@@ -1306,6 +1314,13 @@ const VEGGIES = [
         title: "生育中",
         text: "",
         photos: ["parsley2026aki_261108_1.jpg"],
+      },
+      {
+        date: "11/15",
+        tags: ["grow"],
+        title: "生育中",
+        text: "",
+        photos: ["parsley2026aki_261115_1.jpg"],
       },
     ],
   },
@@ -1408,6 +1423,13 @@ const VEGGIES = [
         text: "そろそろ1列分を収穫しようかと考えている。",
         photos: ["komatsuna_261108_1.jpg"],
       },
+      {
+        date: "11/15",
+        tags: ["grow"],
+        title: "生育中",
+        text: "",
+        photos: ["komatsuna_261115_1.jpg"],
+      },
     ],
   },
 
@@ -1503,6 +1525,13 @@ const VEGGIES = [
         text: "養液の交換を実施した。写真は土栽培と水耕栽培。",
         photos: ["rucola2026aki_261111_1.jpg", "rucola2026aki_261111_2.jpg"],
       },
+      {
+        date: "11/15",
+        tags: ["grow"],
+        title: "生育中",
+        text: "写真は水耕栽培と土栽培。",
+        photos: ["rucola2026aki_261115_1.jpg", "rucola2026aki_261115_2.jpg"],
+      },
     ],
   },
 
@@ -1581,6 +1610,13 @@ const VEGGIES = [
         title: "生育中",
         text: "",
         photos: ["garlic_261108_1.jpg"],
+      },
+      {
+        date: "11/15",
+        tags: ["grow"],
+        title: "生育中",
+        text: "",
+        photos: ["garlic_261115_1.jpg"],
       },
     ],
   },
@@ -2094,6 +2130,13 @@ const VEGGIES = [
         text: "",
         photos: ["nira_261108_1.jpg"],
       },
+      {
+        date: "11/15",
+        tags: ["grow"],
+        title: "生育中",
+        text: "",
+        photos: ["nira_261115_1.jpg"],
+      },
     ],
   },
 
@@ -2597,6 +2640,13 @@ const VEGGIES = [
         title: "生育中",
         text: "",
         photos: ["shiso_261108_1.jpg"],
+      },
+      {
+        date: "11/15",
+        tags: ["grow"],
+        title: "生育中",
+        text: "",
+        photos: ["shiso_261115_1.jpg"],
       },
     ],
   },
