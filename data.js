@@ -18,6 +18,8 @@ const SITE = {
 
 // サイト更新履歴（新しい順・最大10件程度を表示）
 const SITE_UPDATES = [
+  { date: "11/19", text: "サンチュ19枚・小松菜8株の収穫、スナップエンドウの出芽確認、プランタースタンドの費用（11/15分）を追加" },
+  { date: "11/17", text: "ダストボックス（セリア・110円）の費用を追加" },
   { date: "11/15", text: "にんにく・小松菜・サンチュ・パセリ・紫蘇・ニラ・ルッコラの11/15の記録を追加" },
   { date: "11/11", text: "ルッコラ・サンチュの養液交換（11/11）と、マグァンプK・土のリサイクル材の費用（11/8分）を追加" },
   { date: "11/8", text: "スナップエンドウ（2026年秋蒔き）を新規追加。サンチュ15枚収穫・水足し、各野菜の11/8の記録とザルの費用（10/31分）を追加" },
@@ -951,6 +953,13 @@ const VEGGIES = [
         text: "栽培開始。72穴トレーに1〜2粒ずつ種まきした。一晩水に浸けるのを忘れてしまい、植える前に1時間ほど浸けただけで蒔いた。品種は「つるありスナップ」。",
         photos: ["snapendo2026aki_261108_1.jpg", "snapendo2026aki_261108_2.jpg"],
       },
+      {
+        date: "11/19",
+        tags: ["grow"],
+        title: "出芽確認",
+        text: "出芽を確認した。",
+        photos: ["snapendo2026aki_261119_1.jpg"],
+      },
     ],
   },
 
@@ -1218,6 +1227,13 @@ const VEGGIES = [
         text: "写真は全体と根の様子。",
         photos: ["sanchu2026aki_261115_1.jpg", "sanchu2026aki_261115_2.jpg"],
       },
+      {
+        date: "11/19",
+        tags: ["harvest"],
+        title: "19枚収穫",
+        text: "19枚収穫した。写真は収穫前、収穫した葉、収穫後の株。",
+        photos: ["sanchu2026aki_261119_1.jpg", "sanchu2026aki_261119_2.jpg", "sanchu2026aki_261119_3.jpg"],
+      },
     ],
   },
 
@@ -1429,6 +1445,13 @@ const VEGGIES = [
         title: "生育中",
         text: "",
         photos: ["komatsuna_261115_1.jpg"],
+      },
+      {
+        date: "11/19",
+        tags: ["harvest"],
+        title: "8株収穫",
+        text: "1列分の8株を収穫した。写真は収穫前の株、収穫した小松菜、残っている2列目。",
+        photos: ["komatsuna_261119_1.jpg", "komatsuna_261119_2.jpg", "komatsuna_261119_3.jpg"],
       },
     ],
   },
@@ -3259,4 +3282,6 @@ const EXPENSES = [
   { date: "2026-10-31", category: "用具", item: "ザル21cm（手持ちと同サイズ・2個目）", amount: 158, note: "", photo: "cost_261031_strainer.jpg" },
   { date: "2026-11-08", category: "肥料・薬", item: "マグァンプK 中粒 1.1kg", amount: 1064, note: "", photo: "cost_261108_magamp.jpg" },
   { date: "2026-11-08", category: "用土", item: "ハイポネックス 土のリサイクル材 5L", amount: 744, note: "", photo: "cost_261108_soil_recycle.jpg" },
+  { date: "2026-11-15", category: "用具", item: "ポールプランタースタンド8号用（2個）", amount: 220, note: "", photo: "cost_261115_stand.jpg" },
+  { date: "2026-11-17", category: "用具", item: "ダストボックス（セリア・20.5×20.5×21.8cm）", amount: 110, note: "", photo: "cost_261117_dustbox.jpg" },
 ];
